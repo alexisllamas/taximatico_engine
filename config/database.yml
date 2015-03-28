@@ -15,7 +15,7 @@ production:
   <<: *default
   database: taximatico_production
 
-<%= IO.read "#{Rails.root}/config/database.local.yml" %>
-
 cucumber:
   <<: *test
+
+<%= IO.read("#{Rails.root}/config/database.local.yml") if File.exists?("#{Rails.root}/config/database.local.yml") %>
