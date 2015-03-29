@@ -10,6 +10,8 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'devise'
+gem 'carrierwave'
 
 # deployment dependencies
 
@@ -21,7 +23,7 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'rspec-rails'
-  gem 'cucumber-api-steps'
+  gem 'cucumber-api-steps', require: false
   gem 'spring-commands-rspec'
   gem 'spring-commands-cucumber'
 end
@@ -29,5 +31,6 @@ end
 group :test do
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
+  gem 'faker'
 end
 
