@@ -1,6 +1,6 @@
 module Api
   module Users
-    class BaseController < ::ApplicationController
+    class BaseController < ::Api::BaseController
     end
   end
 end
