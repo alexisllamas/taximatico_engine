@@ -1,17 +1,32 @@
 class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
-
-  validates :authentication_token, presence: true
-
-  before_validation :generate_authentication_token, on: :create
+  class AuthenticationError < StandardError; end
 
   mount_uploader :profile_picture, ProfilePictureUploader
 
-  def self.register(attributes)
+  devise :database_authenticatable, :registerable,
+    :recoverable, :rememberable, :trackable, :validatable
+
+  validates :authentication_token,
+    :phone_number,
+    presence: true
+
+  before_validation :generate_authentication_token, on: :create
+
+  def self.register!(attributes)
     create!(attributes)
+  end
+
+  def self.authenticate!(attributes)
+    user = User.find_by!(email: attributes[:email])
+    unless user.valid_password? attributes[:password]
+      raise AuthenticationError.new("Invalid password")
+    end
+    return user
+  end
+
+  def self.destroy_authentication_token!(user)
+    user.send(:generate_authentication_token)
+    user.save!
   end
 
   private
