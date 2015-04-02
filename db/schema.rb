@@ -11,10 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150329152115) do
+ActiveRecord::Schema.define(version: 20150410174838) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "authentication_tokens", force: :cascade do |t|
+    t.string   "token"
+    t.integer  "user_id"
+    t.boolean  "expired",    default: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
+
+  add_index "authentication_tokens", ["user_id"], name: "index_authentication_tokens_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -37,9 +47,21 @@ ActiveRecord::Schema.define(version: 20150329152115) do
   end
 
   add_index "users", ["authentication_token"], name: "index_users_on_authentication_token", unique: true, using: :btree
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["name"], name: "index_users_on_name", using: :btree
+  add_index "users", ["phone_number"], name: "index_users_on_phone_number", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
 
+  create_table "verification_codes", force: :cascade do |t|
+    t.string   "code"
+    t.integer  "user_id"
+    t.boolean  "verified",   default: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
+
+  add_index "verification_codes", ["user_id"], name: "index_verification_codes_on_user_id", using: :btree
+
+  add_foreign_key "authentication_tokens", "users"
+  add_foreign_key "verification_codes", "users"
 end
