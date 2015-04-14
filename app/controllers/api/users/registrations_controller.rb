@@ -3,26 +3,24 @@ module Api
     class RegistrationsController < ::Api::Users::BaseController
       skip_before_filter :find_and_authenticate_user!, only: :create
 
-      rescue_from ActiveRecord::RecordInvalid do |e|
-        render json: { user: { errors: e.message } },
-          status: :unprocessable_entity
-      end
-
       def create
-        @user = User.register!(user_params)
-        render :create, status: :created
+        ::Users::FindAndGenerateVerificationCode.(user_params[:phone_number], success: ->(user) {
+          render json: {
+            status: "ok",
+            message: "verification_code_sent"
+          }, status: :created
+        }, error: ->(user) {
+          render json: {
+            status: "error",
+            errors: user.errors.full_messages
+          }, status: :unprocessable_entity
+        })
       end
 
       private
 
       def user_params
-        params.fetch(:user, {}).permit(:name,
-                                       :email,
-                                       :username,
-                                       :phone_number,
-                                       :profile_picture,
-                                       :password,
-                                       :password_confirmation)
+        params.fetch(:user, {}).permit(:phone_number)
       end
     end
   end

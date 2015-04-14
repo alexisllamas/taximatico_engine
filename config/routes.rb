@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   scope module: :api, defaults: { format: :json } do
     namespace :users do
       resources :registrations, only: :create
-      resources :sessions, only: [ :create, :destroy ]
+      resources :verification_codes, only: [] do
+        collection { get :check }
+      end
     end
   end
 end

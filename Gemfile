@@ -13,6 +13,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'carrierwave'
 gem 'fog'
+gem 'twilio-ruby'
 
 # deployment dependencies
 
@@ -34,5 +35,6 @@ group :test do
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
   gem 'faker'
+  gem 'vcr'
+  gem 'webmock'
 end
-
