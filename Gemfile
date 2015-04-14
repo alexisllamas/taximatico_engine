@@ -29,6 +29,7 @@ group :development, :test do
   gem 'cucumber-api-steps', require: false
   gem 'spring-commands-rspec'
   gem 'spring-commands-cucumber'
+  gem 'yard-cucumber'
 end
 
 group :test do

@@ -9,7 +9,7 @@ development:
 
 test: &test
   <<: *default
-  database: taximatico_text
+  database: taximatico_test
 
 production:
   <<: *default
