@@ -1,7 +1,7 @@
 module Api
   module Users
     class RegistrationsController < ::Api::Users::BaseController
-      skip_before_filter :find_and_authenticate_user!, only: :create
+      skip_before_filter :authenticate_user!, only: :create
 
       def create
         ::Users::VerificationCodes::Create.(user_params[:phone_number],

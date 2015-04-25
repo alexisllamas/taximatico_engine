@@ -28,7 +28,7 @@ Feature: Registrations
 
   @twilio-sms
   Scenario: Sending the code as a returing user
-    Given A user with phone number "+523121125642" exists
+    Given a user with phone number "+523121125642" exists
     And I send a POST request to "/users/registrations" with the following:
     """
     {

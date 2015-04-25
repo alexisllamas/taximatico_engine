@@ -1,7 +1,7 @@
 module Api
   module Users
     class VerificationCodesController < ::Api::Users::BaseController
-      skip_before_filter :find_and_authenticate_user!, only: :check
+      skip_before_filter :authenticate_user!, only: :check
 
       def check
         ::Users::VerificationCodes::Check.(verification_code_params[:code],

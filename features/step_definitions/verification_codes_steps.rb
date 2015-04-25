@@ -1,4 +1,4 @@
-Given /^a user with phone number "(.*?)" and verification code "(.*?)" exists$/ do |phone_number, verification_code|
+Given /^a user with phone number "(.*?)" and verification code "(.*?)" exist$/ do |phone_number, verification_code|
   Users::VerificationCodes::Create.(phone_number, success: ->(user) {
     @user = user
   })

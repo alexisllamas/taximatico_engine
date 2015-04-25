@@ -8,7 +8,7 @@ Feature: Verification codes
 
   @twilio-sms
   Scenario: Successfully verifying the code
-    Given a user with phone number "+523121125642" and verification code "123456" exists
+    Given a user with phone number "+523121125642" and verification code "123456" exist
     And his authentication token is "authentication_token_123"
     And I send a GET request to "/users/verification_codes/check" with the following:
     """
@@ -29,7 +29,7 @@ Feature: Verification codes
 
   @twilio-sms
   Scenario: Unsuccessfully verifying the code
-    Given a user with phone number "+523121125642" and verification code "123456" exists
+    Given a user with phone number "+523121125642" and verification code "123456" exist
     And I send a GET request to "/users/verification_codes/check" with the following:
     """
     {
