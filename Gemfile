@@ -18,6 +18,7 @@ gem 'yard-cucumber', group: :doc
 
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
+gem 'bonsai-elasticsearch-rails', group: :production
 
 # deployment dependencies
 
