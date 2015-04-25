@@ -6,6 +6,7 @@
 
 require 'cucumber/rails'
 require 'cucumber/api_steps'
+require 'rspec/rails'
 
 # Capybara defaults to CSS3 selectors rather than XPath.
 # If you'd prefer to use XPath, just uncomment this line and adjust any
@@ -59,4 +60,8 @@ Cucumber::Rails::Database.javascript_strategy = :truncation
 
 Around do |scenario, block|
   DatabaseCleaner.cleaning(&block)
+end
+
+RSpec.configure do |config|
+  config.expect_with(:rspec) { |c| c.syntax = :should }
 end

@@ -1,12 +1,12 @@
 require 'rails_helper'
 
-describe Users::FindAndGenerateVerificationCode, vcr: "twilio_sms" do
+describe Users::VerificationCodes::Create, vcr: "twilio_sms" do
   let(:phone_number) { "+523121125642" }
   let(:error)        { double :error,   call: true }
   let(:success)      { double :success, call: true }
   let(:arguments)    { [ phone_number, { success: success, error: error } ] }
 
-  subject { Users::FindAndGenerateVerificationCode.call(*arguments) }
+  subject { Users::VerificationCodes::Create.(*arguments) }
 
   describe ".call" do
     context "when providing a new phone number" do

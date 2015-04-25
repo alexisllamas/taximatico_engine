@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://ACb76077918871ccf7287d56d4aea12ecd:f4b7082acfc5648255f252b8a2d2ac70@api.twilio.com/2010-04-01/Accounts/ACb76077918871ccf7287d56d4aea12ecd/Messages.json
+    body:
+      encoding: US-ASCII
+      string: From=15005550006&To=%2B523121125642&Body=%C2%A1Hola%21+Aqu%C3%AD+est%C3%A1+tu+c%C3%B3digo+de+verificaci%C3%B3n+para+ingresar+a+taxim%C3%A1tico.mx+8571384333
+    headers:
+      Accept:
+      - application/json
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - twilio-ruby/3.16.1 (ruby/x86_64-darwin14 2.2.0-p-1)
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 201
+      message: CREATED
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 25 Apr 2015 01:06:09 GMT
+      X-Powered-By:
+      - AT-5000
+      X-Shenanigans:
+      - none
+      Content-Length:
+      - '803'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"sid": "SM397d47a1f670420cb051ddc3e514f2da", "date_created": "Sat,
+        25 Apr 2015 01:06:08 +0000", "date_updated": "Sat, 25 Apr 2015 01:06:08 +0000",
+        "date_sent": null, "account_sid": "ACb76077918871ccf7287d56d4aea12ecd", "to":
+        "+523121125642", "from": "15005550006", "body": "\u00a1Hola! Aqu\u00ed est\u00e1
+        tu c\u00f3digo de verificaci\u00f3n para ingresar a taxim\u00e1tico.mx 8571384333",
+        "status": "queued", "num_segments": "1", "num_media": "0", "direction": "outbound-api",
+        "api_version": "2010-04-01", "price": null, "price_unit": "USD", "uri": "/2010-04-01/Accounts/ACb76077918871ccf7287d56d4aea12ecd/Messages/SM397d47a1f670420cb051ddc3e514f2da.json",
+        "subresource_uris": {"media": "/2010-04-01/Accounts/ACb76077918871ccf7287d56d4aea12ecd/Messages/SM397d47a1f670420cb051ddc3e514f2da/Media.json"}}'
+    http_version: 
+  recorded_at: Sat, 25 Apr 2015 01:06:08 GMT
+recorded_with: VCR 2.9.3
