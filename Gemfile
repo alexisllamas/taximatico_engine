@@ -16,6 +16,9 @@ gem 'fog'
 gem 'twilio-ruby'
 gem 'yard-cucumber', group: :doc
 
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
+
 # deployment dependencies
 
 gem 'puma'

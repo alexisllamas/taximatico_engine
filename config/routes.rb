@@ -9,6 +9,7 @@ Rails.application.routes.draw do
       resources :verification_codes, only: [] do
         collection { get :check }
       end
+      resources :drivers, only: :index
     end
   end
 end
