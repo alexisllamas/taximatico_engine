@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>
-  Feature: Registrations
+  Feature: Search drivers
   
     &mdash; Documentation by YARD 0.8.7.6
   
@@ -19,7 +19,7 @@
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
   relpath = '../../';
-  framesUrl = "../../frames.html#!requirements/features/registrations.html";
+  framesUrl = "../../frames.html#!requirements/features/search_drivers.html";
 </script>
 
 
@@ -35,10 +35,10 @@
     <div id="header">
       <div id="menu">
   
-    <a href="../../_index.html">Index (r)</a> &raquo;
+    <a href="../../_index.html">Index (s)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../../requirements.html" title="requirements (requirements)">requirements</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../features.html" title="requirements::features (featuredirectory)">features</a></span></span>
      &raquo; 
-    <span class="title">registrations</span>
+    <span class="title">search_drivers</span>
   
 
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
@@ -90,17 +90,17 @@ $(function() {
     <a id="expand" class="control" href="#">[Collapse All]</a>
     <div style="clear: right;"></div>
     <span class="pre">Feature:</span>
-    <span class="name">Registrations</span>
+    <span class="name">Search drivers</span>
   </div>
 
   
 
   <div class="description">
-    As&nbsp;a&nbsp;User<br/>I&nbsp;should&nbsp;be&nbsp;able&nbsp;to&nbsp;register&nbsp;to&nbsp;the&nbsp;service<br/>in&nbsp;order&nbsp;to&nbsp;start&nbsp;using&nbsp;it
+    As&nbsp;a&nbsp;user<br/>I&nbsp;should&nbsp;be&nbsp;able&nbsp;to&nbsp;get&nbsp;a&nbsp;list&nbsp;of&nbsp;drivers&nbsp;near&nbsp;me<br/>in&nbsp;order&nbsp;to&nbsp;know&nbsp;if&nbsp;I&nbsp;can&nbsp;get&nbsp;a&nbsp;cab
   </div>
 
   <div class="meta">
-    <div class="file developer">features/registrations.feature</div>
+    <div class="file developer">features/search_drivers.feature</div>
     <div style="clear: right;"></div>
     <div class="tags developer">
       
@@ -127,7 +127,7 @@ $(function() {
 
   <div class="details">
     <div class="meta developer">
-      <div class="file">features/registrations.feature:6</div>
+      <div class="file">features/search_drivers.feature:6</div>
       
       <div style="clear: both;"></div>
     </div>
@@ -162,6 +162,89 @@ $(function() {
 
 
 
+  
+
+  
+  <div class="step even">
+    <span class="predicate">And </span>
+
+    
+
+      
+        <span class="undefined">
+          the following drivers exist:
+          <div class="definition developer">
+            <a href="../step_transformers.html#undefined_steps">
+              <div class="invalid">&nbsp;</div>
+            </a>
+          </div>
+        </span>
+      
+
+    
+  </div>
+
+  <div class="multiline">
+  <table style="">
+
+    <thead>
+      <tr>
+        
+          <th class="odd">name</th>
+        
+          <th class="even">taxi_number</th>
+        
+          <th class="odd">latitude</th>
+        
+          <th class="even">longitude</th>
+        
+      </tr>
+    </thead>
+
+    
+      <tr class="odd">
+        
+          <td>Juan Perez</td>
+        
+          <td>5</td>
+        
+          <td>19.264997</td>
+        
+          <td>-103.7108419</td>
+        
+      </tr>
+    
+      <tr class="even">
+        
+          <td>John Doe</td>
+        
+          <td>22</td>
+        
+          <td>19.265189</td>
+        
+          <td>-103.713567</td>
+        
+      </tr>
+    
+      <tr class="odd">
+        
+          <td>Maria Guadalupe</td>
+        
+          <td>10</td>
+        
+          <td>19.269585</td>
+        
+          <td>-103.716614</td>
+        
+      </tr>
+    
+  </table>
+</div>
+
+  
+
+
+
 
       
     </div>
@@ -182,7 +265,7 @@ $(function() {
     <div style="float: left;">
       <a class="toggle"> - </a>
       <span class="pre">Scenario:</span>
-      <span class="name">Sending your phone number successfully</span>
+      <span class="name">Search drivers succesfully</span>
     </div>
     <a class="link" style="float:right; clear:right;" href="#scenario_0">link</a>
   </div>
@@ -193,14 +276,7 @@ $(function() {
 
   <div class="details">
     <div class="meta developer">
-      <div class="file">features/registrations.feature:11</div>
-      
-        <div style="clear:right;"></div>
-        <div class="tags">
-          
-            <a href="../tags/twilio-sms.html">@twilio-sms</a>
-          
-        </div>
+      <div class="file">features/search_drivers.feature:14</div>
       
       <div style="clear: both;"></div>
     </div>
@@ -218,7 +294,7 @@ $(function() {
 
       
         <span class="undefined">
-          I send a POST request to &quot;/users/registrations&quot; with the following:
+          a user with phone number &quot;+523121125642&quot; exists
           <div class="definition developer">
             <a href="../step_transformers.html#undefined_steps">
               <div class="invalid">&nbsp;</div>
@@ -231,10 +307,7 @@ $(function() {
   </div>
 
   
-  <div class="text">
-  {<br/>&nbsp;&nbsp;&quot;user&quot;&nbsp;:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;phone_number&quot;&nbsp;:&nbsp;&quot;+523121125642&quot;<br/>&nbsp;&nbsp;}<br/>}
-</div>
-
+  
 
 
 
@@ -242,13 +315,13 @@ $(function() {
 
   
   <div class="step even">
-    <span class="predicate">Then </span>
+    <span class="predicate">And </span>
 
     
 
       
         <span class="undefined">
-          the response status should be &quot;201&quot;
+          his coordinates are latitude &quot;19.264987&quot; longitude &quot;-103.710863&quot;
           <div class="definition developer">
             <a href="../step_transformers.html#undefined_steps">
               <div class="invalid">&nbsp;</div>
@@ -275,6 +348,90 @@ $(function() {
 
       
         <span class="undefined">
+          his authentication token is &quot;foobar&quot;
+          <div class="definition developer">
+            <a href="../step_transformers.html#undefined_steps">
+              <div class="invalid">&nbsp;</div>
+            </a>
+          </div>
+        </span>
+      
+
+    
+  </div>
+
+  
+  
+
+
+
+  
+
+  
+  <div class="step even">
+    <span class="predicate">And </span>
+
+    
+
+      
+        <span class="undefined">
+          I send a GET request to &quot;/users/drivers&quot; with the following:
+          <div class="definition developer">
+            <a href="../step_transformers.html#undefined_steps">
+              <div class="invalid">&nbsp;</div>
+            </a>
+          </div>
+        </span>
+      
+
+    
+  </div>
+
+  
+  <div class="text">
+  {<br/>&nbsp;&nbsp;&quot;authentication_token&quot;&nbsp;:&nbsp;&quot;foobar&quot;,<br/>&nbsp;&nbsp;&quot;latitude&quot;&nbsp;:&nbsp;&quot;19.264987&quot;,<br/>&nbsp;&nbsp;&quot;longitude&quot;&nbsp;:&nbsp;&quot;-103.710863&quot;<br/>}
+</div>
+
+
+
+
+  
+
+  
+  <div class="step odd">
+    <span class="predicate">Then </span>
+
+    
+
+      
+        <span class="undefined">
+          the response status should be &quot;200&quot;
+          <div class="definition developer">
+            <a href="../step_transformers.html#undefined_steps">
+              <div class="invalid">&nbsp;</div>
+            </a>
+          </div>
+        </span>
+      
+
+    
+  </div>
+
+  
+  
+
+
+
+  
+
+  
+  <div class="step even">
+    <span class="predicate">And </span>
+
+    
+
+      
+        <span class="undefined">
           the JSON response should be:
           <div class="definition developer">
             <a href="../step_transformers.html#undefined_steps">
@@ -289,7 +446,7 @@ $(function() {
 
   
   <div class="text">
-  {<br/>&nbsp;&nbsp;&quot;status&quot;&nbsp;:&nbsp;&quot;ok&quot;,<br/>&nbsp;&nbsp;&quot;message&quot;&nbsp;:&nbsp;&quot;verification_code_sent&quot;<br/>}
+  [<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;id&quot;&nbsp;:&nbsp;1,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;&nbsp;:&nbsp;&quot;Juan&nbsp;Perez&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;taxi_number&quot;&nbsp;:&nbsp;5,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;latitude&quot;&nbsp;:&nbsp;19.264997,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;longitude&quot;&nbsp;:&nbsp;-103.7108419<br/>&nbsp;&nbsp;},<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;id&quot;&nbsp;:&nbsp;2,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;&nbsp;:&nbsp;&quot;John&nbsp;Doe&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;taxi_number&quot;&nbsp;:&nbsp;22,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;latitude&quot;&nbsp;:&nbsp;19.265189,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;longitude&quot;&nbsp;:&nbsp;-103.713567<br/>&nbsp;&nbsp;},<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;id&quot;&nbsp;:&nbsp;3,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;&nbsp;:&nbsp;&quot;Maria&nbsp;Guadalupe&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;taxi_number&quot;&nbsp;:&nbsp;10,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;latitude&quot;&nbsp;:&nbsp;19.269585,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;longitude&quot;&nbsp;:&nbsp;-103.716614<br/>&nbsp;&nbsp;}<br/>]
 </div>
 
 
@@ -315,7 +472,7 @@ $(function() {
     <div style="float: left;">
       <a class="toggle"> - </a>
       <span class="pre">Scenario:</span>
-      <span class="name">Sending the code as a returing user</span>
+      <span class="name">Search drivers succesfully with no drivers around</span>
     </div>
     <a class="link" style="float:right; clear:right;" href="#scenario_1">link</a>
   </div>
@@ -326,14 +483,7 @@ $(function() {
 
   <div class="details">
     <div class="meta developer">
-      <div class="file">features/registrations.feature:30</div>
-      
-        <div style="clear:right;"></div>
-        <div class="tags">
-          
-            <a href="../tags/twilio-sms.html">@twilio-sms</a>
-          
-        </div>
+      <div class="file">features/search_drivers.feature:54</div>
       
       <div style="clear: both;"></div>
     </div>
@@ -351,7 +501,7 @@ $(function() {
 
       
         <span class="undefined">
-          A user with phone number &quot;+523121125642&quot; exists
+          a user with phone number &quot;+523121125642&quot; exists
           <div class="definition developer">
             <a href="../step_transformers.html#undefined_steps">
               <div class="invalid">&nbsp;</div>
@@ -378,7 +528,61 @@ $(function() {
 
       
         <span class="undefined">
-          I send a POST request to &quot;/users/registrations&quot; with the following:
+          his coordinates are latitude &quot;19.224500&quot; longitude &quot;-103.741848&quot;
+          <div class="definition developer">
+            <a href="../step_transformers.html#undefined_steps">
+              <div class="invalid">&nbsp;</div>
+            </a>
+          </div>
+        </span>
+      
+
+    
+  </div>
+
+  
+  
+
+
+
+  
+
+  
+  <div class="step odd">
+    <span class="predicate">And </span>
+
+    
+
+      
+        <span class="undefined">
+          his authentication token is &quot;foobar&quot;
+          <div class="definition developer">
+            <a href="../step_transformers.html#undefined_steps">
+              <div class="invalid">&nbsp;</div>
+            </a>
+          </div>
+        </span>
+      
+
+    
+  </div>
+
+  
+  
+
+
+
+  
+
+  
+  <div class="step even">
+    <span class="predicate">And </span>
+
+    
+
+      
+        <span class="undefined">
+          I send a GET request to &quot;/users/drivers&quot; with the following:
           <div class="definition developer">
             <a href="../step_transformers.html#undefined_steps">
               <div class="invalid">&nbsp;</div>
@@ -392,7 +596,7 @@ $(function() {
 
   
   <div class="text">
-  {<br/>&nbsp;&nbsp;&quot;user&quot;&nbsp;:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;phone_number&quot;&nbsp;:&nbsp;&quot;+523121125642&quot;<br/>&nbsp;&nbsp;}<br/>}
+  {<br/>&nbsp;&nbsp;&quot;authentication_token&quot;&nbsp;:&nbsp;&quot;foobar&quot;,<br/>&nbsp;&nbsp;&quot;latitude&quot;&nbsp;:&nbsp;&quot;19.224500&quot;,<br/>&nbsp;&nbsp;&quot;longitude&quot;&nbsp;:&nbsp;&quot;-103.741848&quot;<br/>}
 </div>
 
 
@@ -408,7 +612,7 @@ $(function() {
 
       
         <span class="undefined">
-          the response status should be &quot;201&quot;
+          the response status should be &quot;200&quot;
           <div class="definition developer">
             <a href="../step_transformers.html#undefined_steps">
               <div class="invalid">&nbsp;</div>
@@ -449,7 +653,7 @@ $(function() {
 
   
   <div class="text">
-  {<br/>&nbsp;&nbsp;&quot;status&quot;&nbsp;:&nbsp;&quot;ok&quot;,<br/>&nbsp;&nbsp;&quot;message&quot;&nbsp;:&nbsp;&quot;verification_code_sent&quot;<br/>}
+  [&nbsp;]
 </div>
 
 
@@ -475,7 +679,7 @@ $(function() {
     <div style="float: left;">
       <a class="toggle"> - </a>
       <span class="pre">Scenario:</span>
-      <span class="name">Sending your phone number unsuccessfully</span>
+      <span class="name">Search drivers unsuccesfully</span>
     </div>
     <a class="link" style="float:right; clear:right;" href="#scenario_2">link</a>
   </div>
@@ -486,7 +690,7 @@ $(function() {
 
   <div class="details">
     <div class="meta developer">
-      <div class="file">features/registrations.feature:49</div>
+      <div class="file">features/search_drivers.feature:72</div>
       
       <div style="clear: both;"></div>
     </div>
@@ -504,7 +708,7 @@ $(function() {
 
       
         <span class="undefined">
-          I send a POST request to &quot;/users/registrations&quot; with the following:
+          a user with phone number &quot;+523121125642&quot; exists
           <div class="definition developer">
             <a href="../step_transformers.html#undefined_steps">
               <div class="invalid">&nbsp;</div>
@@ -517,10 +721,7 @@ $(function() {
   </div>
 
   
-  <div class="text">
   
-</div>
-
 
 
 
@@ -528,13 +729,13 @@ $(function() {
 
   
   <div class="step even">
-    <span class="predicate">Then </span>
+    <span class="predicate">And </span>
 
     
 
       
         <span class="undefined">
-          the response status should be &quot;422&quot;
+          his coordinates are latitude &quot;19.224500&quot; longitude &quot;-103.741848&quot;
           <div class="definition developer">
             <a href="../step_transformers.html#undefined_steps">
               <div class="invalid">&nbsp;</div>
@@ -561,7 +762,34 @@ $(function() {
 
       
         <span class="undefined">
-          the JSON response should be:
+          his authentication token is &quot;foobar&quot;
+          <div class="definition developer">
+            <a href="../step_transformers.html#undefined_steps">
+              <div class="invalid">&nbsp;</div>
+            </a>
+          </div>
+        </span>
+      
+
+    
+  </div>
+
+  
+  
+
+
+
+  
+
+  
+  <div class="step even">
+    <span class="predicate">And </span>
+
+    
+
+      
+        <span class="undefined">
+          I send a GET request to &quot;/users/drivers&quot; with the following:
           <div class="definition developer">
             <a href="../step_transformers.html#undefined_steps">
               <div class="invalid">&nbsp;</div>
@@ -575,9 +803,36 @@ $(function() {
 
   
   <div class="text">
-  {<br/>&nbsp;&nbsp;&quot;status&quot;&nbsp;:&nbsp;&quot;error&quot;,<br/>&nbsp;&nbsp;&quot;errors&quot;&nbsp;:&nbsp;[&quot;Phone&nbsp;number&nbsp;can&#39;t&nbsp;be&nbsp;blank&quot;,&nbsp;&quot;Phone&nbsp;number&nbsp;is&nbsp;invalid&quot;&nbsp;]<br/>}
+  {<br/>&nbsp;&nbsp;&quot;latitude&quot;&nbsp;:&nbsp;&quot;19.224500&quot;,<br/>&nbsp;&nbsp;&quot;longitude&quot;&nbsp;:&nbsp;&quot;-103.741848&quot;<br/>}
 </div>
 
+
+
+
+  
+
+  
+  <div class="step odd">
+    <span class="predicate">Then </span>
+
+    
+
+      
+        <span class="undefined">
+          the response status should be &quot;401&quot;
+          <div class="definition developer">
+            <a href="../step_transformers.html#undefined_steps">
+              <div class="invalid">&nbsp;</div>
+            </a>
+          </div>
+        </span>
+      
+
+    
+  </div>
+
+  
+  
 
 
 
