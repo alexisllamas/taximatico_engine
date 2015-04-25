@@ -83,7 +83,7 @@
   <div class="summary">
     <div>0<a href="#step_definitions">Step Definitions</a></div>
     <div>0<a href="#step_transforms">Step Transforms</a></div>
-    <div>17<a href="#undefined_steps">Undefined Steps</a></div>
+    <div>16<a href="#undefined_steps">Undefined Steps</a></div>
   </div>
 
 </div><div class="title">
@@ -166,6 +166,33 @@
       <div>
         <span class="predicate">Given </span>
         <span class="undefined">
+          a user with phone number &quot;+523121125642&quot; exists
+        </span>
+      </div>
+      
+        <a class="definition" style="clear: right;" href="features/registrations.html">
+          features/registrations.feature:31
+        </a>
+      
+        <a class="definition" style="clear: right;" href="features/search_drivers.html">
+          features/search_drivers.feature:15
+        </a>
+      
+        <a class="definition" style="clear: right;" href="features/search_drivers.html">
+          features/search_drivers.feature:55
+        </a>
+      
+        <a class="definition" style="clear: right;" href="features/search_drivers.html">
+          features/search_drivers.feature:73
+        </a>
+      
+      <div style="clear: both;"></div>
+    </div>
+    
+    <div class="step odd">
+      <div>
+        <span class="predicate">Given </span>
+        <span class="undefined">
           I send and accept JSON
         </span>
       </div>
@@ -180,6 +207,75 @@
       
         <a class="definition" style="clear: right;" href="features/verification_codes.html">
           features/verification_codes.feature:7
+        </a>
+      
+      <div style="clear: both;"></div>
+    </div>
+    
+    <div class="step even">
+      <div>
+        <span class="predicate">Then </span>
+        <span class="undefined">
+          the response status should be &quot;200&quot;
+        </span>
+      </div>
+      
+        <a class="definition" style="clear: right;" href="features/search_drivers.html">
+          features/search_drivers.feature:26
+        </a>
+      
+        <a class="definition" style="clear: right;" href="features/search_drivers.html">
+          features/search_drivers.feature:66
+        </a>
+      
+        <a class="definition" style="clear: right;" href="features/verification_codes.html">
+          features/verification_codes.feature:21
+        </a>
+      
+      <div style="clear: both;"></div>
+    </div>
+    
+    <div class="step odd">
+      <div>
+        <span class="predicate">Given </span>
+        <span class="undefined">
+          I send a POST request to &quot;/users/registrations&quot; with the following:
+        </span>
+      </div>
+      
+        <a class="definition" style="clear: right;" href="features/registrations.html">
+          features/registrations.feature:12
+        </a>
+      
+        <a class="definition" style="clear: right;" href="features/registrations.html">
+          features/registrations.feature:32
+        </a>
+      
+        <a class="definition" style="clear: right;" href="features/registrations.html">
+          features/registrations.feature:50
+        </a>
+      
+      <div style="clear: both;"></div>
+    </div>
+    
+    <div class="step even">
+      <div>
+        <span class="predicate">And </span>
+        <span class="undefined">
+          I send a GET request to &quot;/users/drivers&quot; with the following:
+        </span>
+      </div>
+      
+        <a class="definition" style="clear: right;" href="features/search_drivers.html">
+          features/search_drivers.feature:18
+        </a>
+      
+        <a class="definition" style="clear: right;" href="features/search_drivers.html">
+          features/search_drivers.feature:58
+        </a>
+      
+        <a class="definition" style="clear: right;" href="features/search_drivers.html">
+          features/search_drivers.feature:76
         </a>
       
       <div style="clear: both;"></div>
@@ -210,22 +306,56 @@
     
     <div class="step even">
       <div>
+        <span class="predicate">And </span>
+        <span class="undefined">
+          I send a POST request to &quot;/users/verification_codes/check&quot; with the following:
+        </span>
+      </div>
+      
+        <a class="definition" style="clear: right;" href="features/verification_codes.html">
+          features/verification_codes.feature:13
+        </a>
+      
+        <a class="definition" style="clear: right;" href="features/verification_codes.html">
+          features/verification_codes.feature:33
+        </a>
+      
+      <div style="clear: both;"></div>
+    </div>
+    
+    <div class="step odd">
+      <div>
         <span class="predicate">Given </span>
         <span class="undefined">
-          I send a POST request to &quot;/users/registrations&quot; with the following:
+          a user with phone number &quot;+523121125642&quot; and verification code &quot;123456&quot; exist
+        </span>
+      </div>
+      
+        <a class="definition" style="clear: right;" href="features/verification_codes.html">
+          features/verification_codes.feature:11
+        </a>
+      
+        <a class="definition" style="clear: right;" href="features/verification_codes.html">
+          features/verification_codes.feature:32
+        </a>
+      
+      <div style="clear: both;"></div>
+    </div>
+    
+    <div class="step even">
+      <div>
+        <span class="predicate">Then </span>
+        <span class="undefined">
+          the response status should be &quot;422&quot;
         </span>
       </div>
       
         <a class="definition" style="clear: right;" href="features/registrations.html">
-          features/registrations.feature:12
+          features/registrations.feature:53
         </a>
       
-        <a class="definition" style="clear: right;" href="features/registrations.html">
-          features/registrations.feature:32
-        </a>
-      
-        <a class="definition" style="clear: right;" href="features/registrations.html">
-          features/registrations.feature:50
+        <a class="definition" style="clear: right;" href="features/verification_codes.html">
+          features/verification_codes.feature:41
         </a>
       
       <div style="clear: both;"></div>
@@ -235,66 +365,16 @@
       <div>
         <span class="predicate">Then </span>
         <span class="undefined">
-          the response status should be &quot;200&quot;
+          the response status should be &quot;201&quot;
         </span>
       </div>
       
-        <a class="definition" style="clear: right;" href="features/search_drivers.html">
-          features/search_drivers.feature:26
+        <a class="definition" style="clear: right;" href="features/registrations.html">
+          features/registrations.feature:20
         </a>
       
-        <a class="definition" style="clear: right;" href="features/search_drivers.html">
-          features/search_drivers.feature:66
-        </a>
-      
-        <a class="definition" style="clear: right;" href="features/verification_codes.html">
-          features/verification_codes.feature:21
-        </a>
-      
-      <div style="clear: both;"></div>
-    </div>
-    
-    <div class="step even">
-      <div>
-        <span class="predicate">Given </span>
-        <span class="undefined">
-          a user with phone number &quot;+523121125642&quot; exists
-        </span>
-      </div>
-      
-        <a class="definition" style="clear: right;" href="features/search_drivers.html">
-          features/search_drivers.feature:15
-        </a>
-      
-        <a class="definition" style="clear: right;" href="features/search_drivers.html">
-          features/search_drivers.feature:55
-        </a>
-      
-        <a class="definition" style="clear: right;" href="features/search_drivers.html">
-          features/search_drivers.feature:73
-        </a>
-      
-      <div style="clear: both;"></div>
-    </div>
-    
-    <div class="step odd">
-      <div>
-        <span class="predicate">And </span>
-        <span class="undefined">
-          I send a GET request to &quot;/users/drivers&quot; with the following:
-        </span>
-      </div>
-      
-        <a class="definition" style="clear: right;" href="features/search_drivers.html">
-          features/search_drivers.feature:18
-        </a>
-      
-        <a class="definition" style="clear: right;" href="features/search_drivers.html">
-          features/search_drivers.feature:58
-        </a>
-      
-        <a class="definition" style="clear: right;" href="features/search_drivers.html">
-          features/search_drivers.feature:76
+        <a class="definition" style="clear: right;" href="features/registrations.html">
+          features/registrations.feature:40
         </a>
       
       <div style="clear: both;"></div>
@@ -321,81 +401,20 @@
     
     <div class="step odd">
       <div>
-        <span class="predicate">Given </span>
+        <span class="predicate">Then </span>
         <span class="undefined">
-          a user with phone number &quot;+523121125642&quot; and verification code &quot;123456&quot; exists
+          the response status should be &quot;401&quot;
         </span>
       </div>
       
-        <a class="definition" style="clear: right;" href="features/verification_codes.html">
-          features/verification_codes.feature:11
-        </a>
-      
-        <a class="definition" style="clear: right;" href="features/verification_codes.html">
-          features/verification_codes.feature:32
+        <a class="definition" style="clear: right;" href="features/search_drivers.html">
+          features/search_drivers.feature:83
         </a>
       
       <div style="clear: both;"></div>
     </div>
     
     <div class="step even">
-      <div>
-        <span class="predicate">Then </span>
-        <span class="undefined">
-          the response status should be &quot;201&quot;
-        </span>
-      </div>
-      
-        <a class="definition" style="clear: right;" href="features/registrations.html">
-          features/registrations.feature:20
-        </a>
-      
-        <a class="definition" style="clear: right;" href="features/registrations.html">
-          features/registrations.feature:40
-        </a>
-      
-      <div style="clear: both;"></div>
-    </div>
-    
-    <div class="step odd">
-      <div>
-        <span class="predicate">Then </span>
-        <span class="undefined">
-          the response status should be &quot;422&quot;
-        </span>
-      </div>
-      
-        <a class="definition" style="clear: right;" href="features/registrations.html">
-          features/registrations.feature:53
-        </a>
-      
-        <a class="definition" style="clear: right;" href="features/verification_codes.html">
-          features/verification_codes.feature:41
-        </a>
-      
-      <div style="clear: both;"></div>
-    </div>
-    
-    <div class="step even">
-      <div>
-        <span class="predicate">And </span>
-        <span class="undefined">
-          I send a GET request to &quot;/users/verification_codes/check&quot; with the following:
-        </span>
-      </div>
-      
-        <a class="definition" style="clear: right;" href="features/verification_codes.html">
-          features/verification_codes.feature:13
-        </a>
-      
-        <a class="definition" style="clear: right;" href="features/verification_codes.html">
-          features/verification_codes.feature:33
-        </a>
-      
-      <div style="clear: both;"></div>
-    </div>
-    
-    <div class="step odd">
       <div>
         <span class="predicate">And </span>
         <span class="undefined">
@@ -410,37 +429,7 @@
       <div style="clear: both;"></div>
     </div>
     
-    <div class="step even">
-      <div>
-        <span class="predicate">Then </span>
-        <span class="undefined">
-          the response status should be &quot;401&quot;
-        </span>
-      </div>
-      
-        <a class="definition" style="clear: right;" href="features/search_drivers.html">
-          features/search_drivers.feature:83
-        </a>
-      
-      <div style="clear: both;"></div>
-    </div>
-    
     <div class="step odd">
-      <div>
-        <span class="predicate">Given </span>
-        <span class="undefined">
-          A user with phone number &quot;+523121125642&quot; exists
-        </span>
-      </div>
-      
-        <a class="definition" style="clear: right;" href="features/registrations.html">
-          features/registrations.feature:31
-        </a>
-      
-      <div style="clear: both;"></div>
-    </div>
-    
-    <div class="step even">
       <div>
         <span class="predicate">And </span>
         <span class="undefined">
@@ -455,7 +444,7 @@
       <div style="clear: both;"></div>
     </div>
     
-    <div class="step odd">
+    <div class="step even">
       <div>
         <span class="predicate">And </span>
         <span class="undefined">
@@ -476,7 +465,7 @@
 </div>
 
     <div id="footer">
-  Generated on Sat Apr 25 16:03:46 2015 by
+  Generated on Sat Apr 25 16:57:50 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.2.0).
 </div>
