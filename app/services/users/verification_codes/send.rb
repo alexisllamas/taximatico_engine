@@ -1,10 +1,6 @@
 module Users
   module VerificationCodes
-    class Send
-      def self.call(*args)
-        new(*args).perform
-      end
-
+    class Send < BaseService
       attr_reader :user, :verification_code
 
       def initialize(user, verification_code)

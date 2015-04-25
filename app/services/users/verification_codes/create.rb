@@ -1,10 +1,6 @@
 module Users
   module VerificationCodes
-    class Create
-      def self.call(*args)
-        new(*args).perform
-      end
-
+    class Create < BaseService
       attr_reader :phone_number, :success, :error, :user
 
       def initialize(phone_number, success:, error: ->(u){})

@@ -1,10 +1,6 @@
 module Users
   module VerificationCodes
-    class Check
-      def self.call(*args)
-        new(*args).perform
-      end
-
+    class Check < BaseService
       attr_reader :code, :success, :error
       attr_accessor :verification_code
 
