@@ -26,7 +26,7 @@ describe Users::VerificationCodes::Create, vcr: "twilio_sms" do
       end
 
       it "sends the message" do
-        expect(Users::SendVerificationCode).to receive(:to)
+        expect(Users::VerificationCodes::Send).to receive(:call)
         subject
       end
     end
@@ -50,7 +50,7 @@ describe Users::VerificationCodes::Create, vcr: "twilio_sms" do
       end
 
       it "sends the message" do
-        expect(Users::SendVerificationCode).to receive(:to)
+        expect(Users::VerificationCodes::Send).to receive(:call)
         subject
       end
     end

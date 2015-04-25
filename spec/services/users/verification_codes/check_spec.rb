@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Users::CheckVerificationCode do
+describe Users::VerificationCodes::Check do
   let(:user) { create(:user) }
   let(:verification_code) { VerificationCode.generate_verification_code(user) }
   let(:success) { double :success, call: true }
@@ -8,7 +8,7 @@ describe Users::CheckVerificationCode do
   let(:args) { [verification_code.code, { success: success, error: error }] }
   let(:token) { AuthenticationToken.get_valid_token(user) }
 
-  subject { Users::CheckVerificationCode.(*args) }
+  subject { Users::VerificationCodes::Check.(*args) }
 
   describe ".call" do
     context "with a valid code" do

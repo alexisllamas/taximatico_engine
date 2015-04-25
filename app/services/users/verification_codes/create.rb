@@ -23,7 +23,7 @@ module Users
 
       def generate_and_send_verification_code
         verification_code = VerificationCode.generate_verification_code(user)
-        Users::SendVerificationCode.to(user, verification_code)
+        Users::VerificationCodes::Send.(user, verification_code)
       end
     end
   end
