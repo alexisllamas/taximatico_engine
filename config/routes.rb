@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     namespace :users do
       resources :registrations, only: :create
       resources :verification_codes, only: [] do
-        collection { get :check }
+        collection { post :check }
       end
       resources :drivers, only: :index
     end
