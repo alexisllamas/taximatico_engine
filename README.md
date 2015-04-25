@@ -1,5 +1,8 @@
 # Taximático engine
 
+[![Code Climate](https://codeclimate.com/github/taximaticomx/taximatico_engine/badges/gpa.svg)](https://codeclimate.com/github/taximaticomx/taximatico_engine)
+[![Test Coverage](https://codeclimate.com/github/taximaticomx/taximatico_engine/badges/coverage.svg)](https://codeclimate.com/github/taximaticomx/taximatico_engine)
+
 This repository contains the code for the API published at [http://api.taximatico.mx/](http://api.taximatico.mx)
 
 ## Setup
