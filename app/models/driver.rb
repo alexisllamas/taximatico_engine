@@ -18,17 +18,13 @@ class Driver < ActiveRecord::Base
   end
 
   def self.geosearch(latitude, longitude)
-    search({ query: {
-      filtered: {
-        query: { match_all: {} },
-        filter: {
-          geo_distance: {
-            distance: "1km",
-            location: { lat: latitude, lon: longitude }
-          }
-        }
-      }
-    }}).records.to_a
+    search({ query: { filtered: {
+      query: { match_all: {} },
+      filter: { geo_distance: {
+        distance: "1km",
+        location: { lat: latitude, lon: longitude }
+      } }
+    }}}).records.to_a
   end
 
   def location
