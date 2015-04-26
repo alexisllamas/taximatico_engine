@@ -26,29 +26,32 @@ Feature: Search drivers
     Then the response status should be "200"
     And the JSON response should be:
     """
-    [
-      {
-        "id" : 1,
-        "name" : "Juan Perez",
-        "taxi_number" : 5,
-        "latitude" : 19.264997,
-        "longitude" : -103.7108419
-      },
-      {
-        "id" : 2,
-        "name" : "John Doe",
-        "taxi_number" : 22,
-        "latitude" : 19.265189,
-        "longitude" : -103.713567
-      },
-      {
-        "id" : 3,
-        "name" : "Maria Guadalupe",
-        "taxi_number" : 10,
-        "latitude" : 19.269585,
-        "longitude" : -103.716614
-      }
-    ]
+    {
+      "status"  : "ok",
+      "drivers" : [
+        {
+          "id" : 1,
+          "name" : "Juan Perez",
+          "taxi_number" : 5,
+          "latitude" : 19.264997,
+          "longitude" : -103.7108419
+        },
+        {
+          "id" : 2,
+          "name" : "John Doe",
+          "taxi_number" : 22,
+          "latitude" : 19.265189,
+          "longitude" : -103.713567
+        },
+        {
+          "id" : 3,
+          "name" : "Maria Guadalupe",
+          "taxi_number" : 10,
+          "latitude" : 19.269585,
+          "longitude" : -103.716614
+        }
+      ]
+    }
     """
 
   Scenario: Search drivers succesfully with no drivers around
@@ -66,7 +69,10 @@ Feature: Search drivers
     Then the response status should be "200"
     And the JSON response should be:
     """
-    [ ]
+    {
+      "status"  : "ok",
+      "drivers" : [ ]
+    }
     """
 
   Scenario: Search drivers unsuccesfully
@@ -81,3 +87,10 @@ Feature: Search drivers
     }
     """
     Then the response status should be "401"
+    And the JSON response should be:
+    """
+    {
+      "status" : "error",
+      "error" : "auth_token_not_present_or_invalid"
+    }
+    """
