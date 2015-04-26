@@ -12,7 +12,6 @@ class User < ActiveRecord::Base
 
   def self.find_by_authentication_token(token)
     User.joins(:authentication_tokens).
-      where(authentication_tokens: { token: token }).
-      first
+      where(authentication_tokens: { token: token, expired: false }).first
   end
 end
