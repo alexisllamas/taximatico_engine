@@ -446,7 +446,7 @@ $(function() {
 
   
   <div class="text">
-  [<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;id&quot;&nbsp;:&nbsp;1,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;&nbsp;:&nbsp;&quot;Juan&nbsp;Perez&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;taxi_number&quot;&nbsp;:&nbsp;5,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;latitude&quot;&nbsp;:&nbsp;19.264997,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;longitude&quot;&nbsp;:&nbsp;-103.7108419<br/>&nbsp;&nbsp;},<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;id&quot;&nbsp;:&nbsp;2,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;&nbsp;:&nbsp;&quot;John&nbsp;Doe&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;taxi_number&quot;&nbsp;:&nbsp;22,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;latitude&quot;&nbsp;:&nbsp;19.265189,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;longitude&quot;&nbsp;:&nbsp;-103.713567<br/>&nbsp;&nbsp;},<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;id&quot;&nbsp;:&nbsp;3,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;&nbsp;:&nbsp;&quot;Maria&nbsp;Guadalupe&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;taxi_number&quot;&nbsp;:&nbsp;10,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;latitude&quot;&nbsp;:&nbsp;19.269585,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;longitude&quot;&nbsp;:&nbsp;-103.716614<br/>&nbsp;&nbsp;}<br/>]
+  {<br/>&nbsp;&nbsp;&quot;status&quot;&nbsp;&nbsp;:&nbsp;&quot;ok&quot;,<br/>&nbsp;&nbsp;&quot;drivers&quot;&nbsp;:&nbsp;[<br/>&nbsp;&nbsp;&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;id&quot;&nbsp;:&nbsp;1,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;&nbsp;:&nbsp;&quot;Juan&nbsp;Perez&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;taxi_number&quot;&nbsp;:&nbsp;5,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;latitude&quot;&nbsp;:&nbsp;19.264997,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;longitude&quot;&nbsp;:&nbsp;-103.7108419<br/>&nbsp;&nbsp;&nbsp;&nbsp;},<br/>&nbsp;&nbsp;&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;id&quot;&nbsp;:&nbsp;2,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;&nbsp;:&nbsp;&quot;John&nbsp;Doe&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;taxi_number&quot;&nbsp;:&nbsp;22,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;latitude&quot;&nbsp;:&nbsp;19.265189,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;longitude&quot;&nbsp;:&nbsp;-103.713567<br/>&nbsp;&nbsp;&nbsp;&nbsp;},<br/>&nbsp;&nbsp;&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;id&quot;&nbsp;:&nbsp;3,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;&nbsp;:&nbsp;&quot;Maria&nbsp;Guadalupe&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;taxi_number&quot;&nbsp;:&nbsp;10,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;latitude&quot;&nbsp;:&nbsp;19.269585,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;longitude&quot;&nbsp;:&nbsp;-103.716614<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;]<br/>}
 </div>
 
 
@@ -483,7 +483,7 @@ $(function() {
 
   <div class="details">
     <div class="meta developer">
-      <div class="file">features/search_drivers.feature:54</div>
+      <div class="file">features/search_drivers.feature:57</div>
       
       <div style="clear: both;"></div>
     </div>
@@ -653,7 +653,7 @@ $(function() {
 
   
   <div class="text">
-  [&nbsp;]
+  {<br/>&nbsp;&nbsp;&quot;status&quot;&nbsp;&nbsp;:&nbsp;&quot;ok&quot;,<br/>&nbsp;&nbsp;&quot;drivers&quot;&nbsp;:&nbsp;[&nbsp;]<br/>}
 </div>
 
 
@@ -690,7 +690,7 @@ $(function() {
 
   <div class="details">
     <div class="meta developer">
-      <div class="file">features/search_drivers.feature:72</div>
+      <div class="file">features/search_drivers.feature:78</div>
       
       <div style="clear: both;"></div>
     </div>
@@ -836,6 +836,36 @@ $(function() {
 
 
 
+  
+
+  
+  <div class="step even">
+    <span class="predicate">And </span>
+
+    
+
+      
+        <span class="undefined">
+          the JSON response should be:
+          <div class="definition developer">
+            <a href="../step_transformers.html#undefined_steps">
+              <div class="invalid">&nbsp;</div>
+            </a>
+          </div>
+        </span>
+      
+
+    
+  </div>
+
+  
+  <div class="text">
+  {<br/>&nbsp;&nbsp;&quot;status&quot;&nbsp;:&nbsp;&quot;error&quot;,<br/>&nbsp;&nbsp;&quot;error&quot;&nbsp;:&nbsp;&quot;auth_token_not_present_or_invalid&quot;<br/>}
+</div>
+
+
+
+
 
       
     </div>
@@ -853,7 +883,7 @@ $(function() {
 </div>
 
     <div id="footer">
-  Generated on Sat Apr 25 16:57:50 2015 by
+  Generated on Sun Apr 26 11:57:50 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.2.0).
 </div>
