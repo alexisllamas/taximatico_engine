@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/taximaticomx/taximatico_engine.png?label=ready&title=Ready)](https://waffle.io/taximaticomx/taximatico_engine)
 # Taximático engine
 
 [![Code Climate](https://codeclimate.com/github/taximaticomx/taximatico_engine/badges/gpa.svg)](https://codeclimate.com/github/taximaticomx/taximatico_engine)
