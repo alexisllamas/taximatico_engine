@@ -4,7 +4,9 @@ json.drivers do
     json.id          driver.id
     json.name        driver.name
     json.taxi_number driver.taxi_number
-    json.latitude    driver.latitude
-    json.longitude   driver.longitude
+    json.location do
+      json.latitude    driver.latitude
+      json.longitude   driver.longitude
+    end
   end
 end
