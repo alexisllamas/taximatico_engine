@@ -8,3 +8,7 @@ Given /^his coordinates are latitude "(.*?)" longitude "(.*?)"$/ do |latitude, l
   @user.update(latitude: latitude,
                longitude: longitude)
 end
+
+Given /^I set the request with the header "(.*?)" as "(.*?)"$/ do |request_header, authentication_token|
+  header request_header, authentication_token
+end

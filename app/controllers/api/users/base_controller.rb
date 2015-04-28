@@ -13,7 +13,11 @@ module Api
       end
 
       def user
-        @user ||= User.find_by_authentication_token(params[:authentication_token])
+        @user ||= User.find_by_authentication_token(authentication_token)
+      end
+
+      def authentication_token
+        request.headers['X-AUTHENTICATION-TOKEN']
       end
     end
   end
