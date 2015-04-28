@@ -33,22 +33,28 @@ Feature: Search drivers
           "id" : 1,
           "name" : "Juan Perez",
           "taxi_number" : 5,
-          "latitude" : 19.264997,
-          "longitude" : -103.7108419
+          "location" : {
+            "latitude" : 19.264997,
+            "longitude" : -103.7108419
+          }
         },
         {
           "id" : 2,
           "name" : "John Doe",
           "taxi_number" : 22,
-          "latitude" : 19.265189,
-          "longitude" : -103.713567
+          "location" : {
+            "latitude" : 19.265189,
+            "longitude" : -103.713567
+          }
         },
         {
           "id" : 3,
           "name" : "Maria Guadalupe",
           "taxi_number" : 10,
-          "latitude" : 19.269585,
-          "longitude" : -103.716614
+          "location" : {
+            "latitude" : 19.269585,
+            "longitude" : -103.716614
+          }
         }
       ]
     }
