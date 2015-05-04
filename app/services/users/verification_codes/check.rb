@@ -2,16 +2,13 @@ module Users
   module VerificationCodes
     class Check < BaseService
       attr_reader :code, :success, :error
-      attr_accessor :verification_code
 
       def initialize(code, success:, error: -> {})
         @code, @success, @error = code, success, error
-        @verification_code = VerificationCode.where(code: code).first
       end
 
       def perform
-        if verification_code.present?
-          verification_code.update(verified: true)
+        if verification_code.present? and verification_code.verify!
           success.call(authentication_token)
         else
           error.call("verification_code_not_exists")
@@ -19,6 +16,10 @@ module Users
       end
 
       private
+
+      def verification_code
+        @verification_code ||= VerificationCode.find_by_code(code)
+      end
 
       def authentication_token
         @authentication_token ||=

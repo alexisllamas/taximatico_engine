@@ -46,3 +46,32 @@ Feature: Verification codes
       "error"  : "verification_code_not_exists"
     }
     """
+
+  @twilio-sms
+  Scenario: Trying to verify code twice
+    Given a user with phone number "+523121125642" and verification code "123456" exist
+    And I send a POST request to "/users/verification_codes/check" with the following:
+    """
+    {
+      "verification_code" : {
+        "code" : "123456"
+      }
+    }
+    """
+    Then the response status should be "200"
+    And I send a POST request to "/users/verification_codes/check" with the following:
+    """
+    {
+      "verification_code" : {
+        "code" : "123456"
+      }
+    }
+    """
+    Then the response status should be "422"
+    And the JSON response should be:
+    """
+    {
+      "status" : "error",
+      "error"  : "verification_code_not_exists"
+    }
+    """
