@@ -14,3 +14,7 @@ end
 Given /^I set the request with the header "(.*?)" as "(.*?)"$/ do |request_header, authentication_token|
   header request_header, authentication_token
 end
+
+Given /^the time is (\d+)\-(\d+)\-(\d+) (\d+):(\d+)$/ do |year, month, day, hour, minute|
+  Timecop.freeze DateTime.new(year.to_i, month.to_i, day.to_i, hour.to_i, minute.to_i)
+end

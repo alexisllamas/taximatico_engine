@@ -13,7 +13,6 @@ Feature: Search drivers
 
   Scenario: Search drivers succesfully
     Given a user with phone number "+523121125642" exists
-    And his coordinates are latitude "19.264987" longitude "-103.710863"
     And his authentication token is "foobar"
     And I set the request with the header "X-AUTHENTICATION-TOKEN" as "foobar"
     And I send a GET request to "/users/drivers" with the following:
@@ -62,7 +61,6 @@ Feature: Search drivers
 
   Scenario: Search drivers succesfully with no drivers around
     Given a user with phone number "+523121125642" exists
-    And his coordinates are latitude "19.224500" longitude "-103.741848"
     And his authentication token is "foobar"
     And I set the request with the header "X-AUTHENTICATION-TOKEN" as "foobar"
     And I send a GET request to "/users/drivers" with the following:
@@ -83,7 +81,6 @@ Feature: Search drivers
 
   Scenario: Search drivers unsuccesfully
     Given a user with phone number "+523121125642" exists
-    And his coordinates are latitude "19.224500" longitude "-103.741848"
     And his authentication token is "foobar"
     And I send a GET request to "/users/drivers" with the following:
     """
