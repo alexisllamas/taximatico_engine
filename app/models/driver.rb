@@ -5,6 +5,7 @@ class Driver < ActiveRecord::Base
   include Elasticsearch::Model::Callbacks
 
   mapping do
+    indexes :id,          type: "integer"
     indexes :name,        type: "string"
     indexes :taxi_number, type: "integer"
     indexes :location,    type: "geo_point"
@@ -18,13 +19,16 @@ class Driver < ActiveRecord::Base
   end
 
   def self.geosearch(latitude, longitude)
-    search({ query: { filtered: {
-      query: { match_all: {} },
-      filter: { geo_distance: {
-        distance: "1km",
-        location: { lat: latitude, lon: longitude }
+    search({
+      sort:  { id: { order: :asc } },
+      query: { filtered: {
+        query:  { match_all: {} },
+        filter: { geo_distance: {
+          distance: "1km",
+          location: { lat: latitude, lon: longitude }
+        } }
       } }
-    }}}).records.to_a
+    }).records
   end
 
   def location
@@ -32,7 +36,7 @@ class Driver < ActiveRecord::Base
   end
 
   def as_indexed_json(options={})
-    as_json(only: [ :name, :taxi_number ],
+    as_json(only: [ :id, :name, :taxi_number ],
             methods: [ :location ])
   end
 end

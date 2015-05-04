@@ -34,6 +34,7 @@ group :development, :test do
   gem 'cucumber-api-steps', require: false
   gem 'spring-commands-rspec'
   gem 'spring-commands-cucumber'
+  gem "codeclimate-test-reporter", require: nil
 end
 
 group :test do
