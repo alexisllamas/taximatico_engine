@@ -12,6 +12,14 @@ class VerificationCode < ActiveRecord::Base
     create!(user: user)
   end
 
+  def self.find_by_code(code)
+    where(code: code, verified: false).first
+  end
+
+  def verify!
+    update(verified: true)
+  end
+
   private
 
   def generate_code
