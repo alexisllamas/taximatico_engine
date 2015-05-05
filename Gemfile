@@ -43,4 +43,5 @@ group :test do
   gem 'faker'
   gem 'vcr'
   gem 'webmock'
+  gem 'timecop'
 end

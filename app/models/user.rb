@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
 
   has_many :verification_codes
   has_many :authentication_tokens
+  has_many :requests
 
   def self.find_by_authentication_token(token)
     User.joins(:authentication_tokens).
