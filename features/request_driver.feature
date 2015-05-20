@@ -11,12 +11,12 @@ Feature: Request driver
       | Juan Perez        | 5           | 19.264997 | -103.7108419 |
       | John Doe          | 22          | 19.265189 | -103.713567  |
       | Maria Guadalupe   | 10          | 19.269585 | -103.716614  |
-
-  Scenario: Request a driver successfully
     Given a user with phone number "+523121125642" exists
     And his authentication token is "foobar"
     And I set the request with the header "X-AUTHENTICATION-TOKEN" as "foobar"
-    And I send a POST request to "/users/requests" with the following:
+
+  Scenario: Request a driver successfully
+    Given I send a POST request to "/users/driver_requests" with the following:
     """
     {
       "latitude" : "19.264987",
@@ -28,9 +28,11 @@ Feature: Request driver
     """
     {
       "status"  : "ok",
-      "request" : {
+      "driver_request" : {
         "id" : 1,
         "user_id" : 1,
+        "driver_id" : null,
+        "status" : "pending",
         "created_at" : "2015-05-04T22:00:00.000Z",
         "expires_at" : "2015-05-04T22:03:00.000Z"
       }
@@ -38,10 +40,7 @@ Feature: Request driver
     """
 
   Scenario: Trying to make a request with no drivers around
-    Given a user with phone number "+523121125642" exists
-    And his authentication token is "foobar"
-    And I set the request with the header "X-AUTHENTICATION-TOKEN" as "foobar"
-    And I send a POST request to "/users/requests" with the following:
+    Given I send a POST request to "/users/driver_requests" with the following:
     """
     {
       "latitude" : "19.224500",
@@ -58,10 +57,7 @@ Feature: Request driver
     """
 
   Scenario: Trying to make a request twice
-    Given a user with phone number "+523121125642" exists
-    And his authentication token is "foobar"
-    And I set the request with the header "X-AUTHENTICATION-TOKEN" as "foobar"
-    And I send a POST request to "/users/requests" with the following:
+    Given I send a POST request to "/users/driver_requests" with the following:
     """
     {
       "latitude" : "19.264987",
@@ -69,7 +65,7 @@ Feature: Request driver
     }
     """
     Then the response status should be "201"
-    And I send a POST request to "/users/requests" with the following:
+    And I send a POST request to "/users/driver_requests" with the following:
     """
     {
       "latitude" : "19.264987",
@@ -81,7 +77,6 @@ Feature: Request driver
     """
     {
       "status"  : "error",
-      "error" : "multiple_requests_not_allowed"
+      "error" : "multiple_driver_requests_not_allowed"
     }
     """
-

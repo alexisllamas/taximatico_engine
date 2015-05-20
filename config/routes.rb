@@ -11,7 +11,12 @@ Rails.application.routes.draw do
       end
 
       resources :drivers, only: :index
-      resources :requests, only: :create
+
+      resources :driver_requests, only: [ :create, :show ] do
+        member do
+          get :progress
+        end
+      end
     end
   end
 end

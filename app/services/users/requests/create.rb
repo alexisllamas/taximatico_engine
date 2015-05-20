@@ -9,10 +9,10 @@ module Users
       end
 
       def perform
-        return error.call("multiple_requests_not_allowed") if Request.has_active_requests? user
+        return error.call("multiple_driver_requests_not_allowed") if has_active_driver_requests?
 
         if drivers_around?
-          success.call(request)
+          success.call(driver_request)
         else
           error.call("no_drivers_around")
         end
@@ -21,11 +21,15 @@ module Users
       private
 
       def drivers_around?
-        Driver.geosearch(latitude, longitude).any?
+        Geosearch.for(Driver, latitude, longitude, "1km").any?
       end
 
-      def request
-        @request ||= Request.create_request(user, latitude, longitude)
+      def has_active_driver_requests?
+        Driver::Request.has_active_driver_requests? user
+      end
+
+      def driver_request
+        @driver_request ||= Driver::Request.create_driver_request(user, latitude, longitude)
       end
     end
   end

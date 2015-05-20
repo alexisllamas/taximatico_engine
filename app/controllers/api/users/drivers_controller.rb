@@ -2,8 +2,17 @@ module Api
   module Users
     class DriversController < ::Api::Users::BaseController
       def index
-        location = [params[:latitude].to_f, params[:longitude].to_f]
-        @drivers = Driver.geosearch(*location)
+        @drivers = Geosearch.for(Driver, latitude, longitude, "1km")
+      end
+
+      private
+
+      def latitude
+        params[:latitude].to_f
+      end
+
+      def longitude
+        params[:longitude].to_f
       end
     end
   end
