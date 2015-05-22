@@ -272,6 +272,87 @@ $(function() {
 
 
 
+  
+
+  
+  <div class="step even">
+    <span class="predicate">Given </span>
+
+    
+
+      
+        <span class="undefined">
+          a user with phone number &quot;+523121125642&quot; exists
+          <div class="definition developer">
+            <a href="../step_transformers.html#undefined_steps">
+              <div class="invalid">&nbsp;</div>
+            </a>
+          </div>
+        </span>
+      
+
+    
+  </div>
+
+  
+  
+
+
+
+  
+
+  
+  <div class="step odd">
+    <span class="predicate">And </span>
+
+    
+
+      
+        <span class="undefined">
+          his authentication token is &quot;foobar&quot;
+          <div class="definition developer">
+            <a href="../step_transformers.html#undefined_steps">
+              <div class="invalid">&nbsp;</div>
+            </a>
+          </div>
+        </span>
+      
+
+    
+  </div>
+
+  
+  
+
+
+
+  
+
+  
+  <div class="step even">
+    <span class="predicate">And </span>
+
+    
+
+      
+        <span class="undefined">
+          I set the request with the header &quot;X-AUTHENTICATION-TOKEN&quot; as &quot;foobar&quot;
+          <div class="definition developer">
+            <a href="../step_transformers.html#undefined_steps">
+              <div class="invalid">&nbsp;</div>
+            </a>
+          </div>
+        </span>
+      
+
+    
+  </div>
+
+  
+  
+
+
+
 
       
     </div>
@@ -303,7 +384,7 @@ $(function() {
 
   <div class="details">
     <div class="meta developer">
-      <div class="file">features/request_driver.feature:15</div>
+      <div class="file">features/request_driver.feature:18</div>
       
       <div style="clear: both;"></div>
     </div>
@@ -321,88 +402,7 @@ $(function() {
 
       
         <span class="undefined">
-          a user with phone number &quot;+523121125642&quot; exists
-          <div class="definition developer">
-            <a href="../step_transformers.html#undefined_steps">
-              <div class="invalid">&nbsp;</div>
-            </a>
-          </div>
-        </span>
-      
-
-    
-  </div>
-
-  
-  
-
-
-
-  
-
-  
-  <div class="step even">
-    <span class="predicate">And </span>
-
-    
-
-      
-        <span class="undefined">
-          his authentication token is &quot;foobar&quot;
-          <div class="definition developer">
-            <a href="../step_transformers.html#undefined_steps">
-              <div class="invalid">&nbsp;</div>
-            </a>
-          </div>
-        </span>
-      
-
-    
-  </div>
-
-  
-  
-
-
-
-  
-
-  
-  <div class="step odd">
-    <span class="predicate">And </span>
-
-    
-
-      
-        <span class="undefined">
-          I set the request with the header &quot;X-AUTHENTICATION-TOKEN&quot; as &quot;foobar&quot;
-          <div class="definition developer">
-            <a href="../step_transformers.html#undefined_steps">
-              <div class="invalid">&nbsp;</div>
-            </a>
-          </div>
-        </span>
-      
-
-    
-  </div>
-
-  
-  
-
-
-
-  
-
-  
-  <div class="step even">
-    <span class="predicate">And </span>
-
-    
-
-      
-        <span class="undefined">
-          I send a POST request to &quot;/users/requests&quot; with the following:
+          I send a POST request to &quot;/users/driver_requests&quot; with the following:
           <div class="definition developer">
             <a href="../step_transformers.html#undefined_steps">
               <div class="invalid">&nbsp;</div>
@@ -425,7 +425,7 @@ $(function() {
   
 
   
-  <div class="step odd">
+  <div class="step even">
     <span class="predicate">Then </span>
 
     
@@ -452,7 +452,7 @@ $(function() {
   
 
   
-  <div class="step even">
+  <div class="step odd">
     <span class="predicate">And </span>
 
     
@@ -473,7 +473,7 @@ $(function() {
 
   
   <div class="text">
-  {<br/>&nbsp;&nbsp;&quot;status&quot;&nbsp;&nbsp;:&nbsp;&quot;ok&quot;,<br/>&nbsp;&nbsp;&quot;request&quot;&nbsp;:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;id&quot;&nbsp;:&nbsp;1,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;user_id&quot;&nbsp;:&nbsp;1,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;created_at&quot;&nbsp;:&nbsp;&quot;2015-05-04T22:00:00.000Z&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;expires_at&quot;&nbsp;:&nbsp;&quot;2015-05-04T22:03:00.000Z&quot;<br/>&nbsp;&nbsp;}<br/>}
+  {<br/>&nbsp;&nbsp;&quot;status&quot;&nbsp;&nbsp;:&nbsp;&quot;ok&quot;,<br/>&nbsp;&nbsp;&quot;driver_request&quot;&nbsp;:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;id&quot;&nbsp;:&nbsp;1,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;user_id&quot;&nbsp;:&nbsp;1,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;driver_id&quot;&nbsp;:&nbsp;null,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;status&quot;&nbsp;:&nbsp;&quot;pending&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;created_at&quot;&nbsp;:&nbsp;&quot;2015-05-04T22:00:00.000Z&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;expires_at&quot;&nbsp;:&nbsp;&quot;2015-05-04T22:03:00.000Z&quot;<br/>&nbsp;&nbsp;}<br/>}
 </div>
 
 
@@ -510,7 +510,7 @@ $(function() {
 
   <div class="details">
     <div class="meta developer">
-      <div class="file">features/request_driver.feature:40</div>
+      <div class="file">features/request_driver.feature:42</div>
       
       <div style="clear: both;"></div>
     </div>
@@ -528,88 +528,7 @@ $(function() {
 
       
         <span class="undefined">
-          a user with phone number &quot;+523121125642&quot; exists
-          <div class="definition developer">
-            <a href="../step_transformers.html#undefined_steps">
-              <div class="invalid">&nbsp;</div>
-            </a>
-          </div>
-        </span>
-      
-
-    
-  </div>
-
-  
-  
-
-
-
-  
-
-  
-  <div class="step even">
-    <span class="predicate">And </span>
-
-    
-
-      
-        <span class="undefined">
-          his authentication token is &quot;foobar&quot;
-          <div class="definition developer">
-            <a href="../step_transformers.html#undefined_steps">
-              <div class="invalid">&nbsp;</div>
-            </a>
-          </div>
-        </span>
-      
-
-    
-  </div>
-
-  
-  
-
-
-
-  
-
-  
-  <div class="step odd">
-    <span class="predicate">And </span>
-
-    
-
-      
-        <span class="undefined">
-          I set the request with the header &quot;X-AUTHENTICATION-TOKEN&quot; as &quot;foobar&quot;
-          <div class="definition developer">
-            <a href="../step_transformers.html#undefined_steps">
-              <div class="invalid">&nbsp;</div>
-            </a>
-          </div>
-        </span>
-      
-
-    
-  </div>
-
-  
-  
-
-
-
-  
-
-  
-  <div class="step even">
-    <span class="predicate">And </span>
-
-    
-
-      
-        <span class="undefined">
-          I send a POST request to &quot;/users/requests&quot; with the following:
+          I send a POST request to &quot;/users/driver_requests&quot; with the following:
           <div class="definition developer">
             <a href="../step_transformers.html#undefined_steps">
               <div class="invalid">&nbsp;</div>
@@ -632,7 +551,7 @@ $(function() {
   
 
   
-  <div class="step odd">
+  <div class="step even">
     <span class="predicate">Then </span>
 
     
@@ -659,7 +578,7 @@ $(function() {
   
 
   
-  <div class="step even">
+  <div class="step odd">
     <span class="predicate">And </span>
 
     
@@ -717,7 +636,7 @@ $(function() {
 
   <div class="details">
     <div class="meta developer">
-      <div class="file">features/request_driver.feature:60</div>
+      <div class="file">features/request_driver.feature:59</div>
       
       <div style="clear: both;"></div>
     </div>
@@ -735,88 +654,7 @@ $(function() {
 
       
         <span class="undefined">
-          a user with phone number &quot;+523121125642&quot; exists
-          <div class="definition developer">
-            <a href="../step_transformers.html#undefined_steps">
-              <div class="invalid">&nbsp;</div>
-            </a>
-          </div>
-        </span>
-      
-
-    
-  </div>
-
-  
-  
-
-
-
-  
-
-  
-  <div class="step even">
-    <span class="predicate">And </span>
-
-    
-
-      
-        <span class="undefined">
-          his authentication token is &quot;foobar&quot;
-          <div class="definition developer">
-            <a href="../step_transformers.html#undefined_steps">
-              <div class="invalid">&nbsp;</div>
-            </a>
-          </div>
-        </span>
-      
-
-    
-  </div>
-
-  
-  
-
-
-
-  
-
-  
-  <div class="step odd">
-    <span class="predicate">And </span>
-
-    
-
-      
-        <span class="undefined">
-          I set the request with the header &quot;X-AUTHENTICATION-TOKEN&quot; as &quot;foobar&quot;
-          <div class="definition developer">
-            <a href="../step_transformers.html#undefined_steps">
-              <div class="invalid">&nbsp;</div>
-            </a>
-          </div>
-        </span>
-      
-
-    
-  </div>
-
-  
-  
-
-
-
-  
-
-  
-  <div class="step even">
-    <span class="predicate">And </span>
-
-    
-
-      
-        <span class="undefined">
-          I send a POST request to &quot;/users/requests&quot; with the following:
+          I send a POST request to &quot;/users/driver_requests&quot; with the following:
           <div class="definition developer">
             <a href="../step_transformers.html#undefined_steps">
               <div class="invalid">&nbsp;</div>
@@ -839,7 +677,7 @@ $(function() {
   
 
   
-  <div class="step odd">
+  <div class="step even">
     <span class="predicate">Then </span>
 
     
@@ -866,14 +704,14 @@ $(function() {
   
 
   
-  <div class="step even">
+  <div class="step odd">
     <span class="predicate">And </span>
 
     
 
       
         <span class="undefined">
-          I send a POST request to &quot;/users/requests&quot; with the following:
+          I send a POST request to &quot;/users/driver_requests&quot; with the following:
           <div class="definition developer">
             <a href="../step_transformers.html#undefined_steps">
               <div class="invalid">&nbsp;</div>
@@ -896,7 +734,7 @@ $(function() {
   
 
   
-  <div class="step odd">
+  <div class="step even">
     <span class="predicate">Then </span>
 
     
@@ -923,7 +761,7 @@ $(function() {
   
 
   
-  <div class="step even">
+  <div class="step odd">
     <span class="predicate">And </span>
 
     
@@ -944,7 +782,7 @@ $(function() {
 
   
   <div class="text">
-  {<br/>&nbsp;&nbsp;&quot;status&quot;&nbsp;&nbsp;:&nbsp;&quot;error&quot;,<br/>&nbsp;&nbsp;&quot;error&quot;&nbsp;:&nbsp;&quot;multiple_requests_not_allowed&quot;<br/>}
+  {<br/>&nbsp;&nbsp;&quot;status&quot;&nbsp;&nbsp;:&nbsp;&quot;error&quot;,<br/>&nbsp;&nbsp;&quot;error&quot;&nbsp;:&nbsp;&quot;multiple_driver_requests_not_allowed&quot;<br/>}
 </div>
 
 
@@ -967,7 +805,7 @@ $(function() {
 </div>
 
     <div id="footer">
-  Generated on Tue May  5 13:28:55 2015 by
+  Generated on Fri May 22 18:06:33 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.2.0).
 </div>

@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>
-  Feature: Verification codes
+  Feature: Request driver status
   
     &mdash; Documentation by YARD 0.8.7.6
   
@@ -19,7 +19,7 @@
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
   relpath = '../../';
-  framesUrl = "../../frames.html#!requirements/features/verification_codes.html";
+  framesUrl = "../../frames.html#!requirements/features/request_driver_status.html";
 </script>
 
 
@@ -35,10 +35,10 @@
     <div id="header">
       <div id="menu">
   
-    <a href="../../_index.html">Index (v)</a> &raquo;
+    <a href="../../_index.html">Index (r)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../../requirements.html" title="requirements (requirements)">requirements</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../features.html" title="requirements::features (featuredirectory)">features</a></span></span>
      &raquo; 
-    <span class="title">verification_codes</span>
+    <span class="title">request_driver_status</span>
   
 
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
@@ -90,17 +90,17 @@ $(function() {
     <a id="expand" class="control" href="#">[Collapse All]</a>
     <div style="clear: right;"></div>
     <span class="pre">Feature:</span>
-    <span class="name">Verification codes</span>
+    <span class="name">Request driver status</span>
   </div>
 
   
 
   <div class="description">
-    As&nbsp;a&nbsp;User<br/>I&nbsp;should&nbsp;be&nbsp;able&nbsp;to&nbsp;validate&nbsp;my&nbsp;verification&nbsp;code<br/>in&nbsp;order&nbsp;to&nbsp;get&nbsp;the&nbsp;authentication&nbsp;token:
+    As&nbsp;a&nbsp;user<br/>I&nbsp;should&nbsp;be&nbsp;able&nbsp;to&nbsp;see&nbsp;my&nbsp;request&nbsp;status<br/>in&nbsp;order&nbsp;to&nbsp;know&nbsp;if&nbsp;a&nbsp;driver&nbsp;has&nbsp;accepted&nbsp;it
   </div>
 
   <div class="meta">
-    <div class="file developer">features/verification_codes.feature</div>
+    <div class="file developer">features/request_driver_status.feature</div>
     <div style="clear: right;"></div>
     <div class="tags developer">
       
@@ -127,7 +127,7 @@ $(function() {
 
   <div class="details">
     <div class="meta developer">
-      <div class="file">features/verification_codes.feature:6</div>
+      <div class="file">features/request_driver_status.feature:6</div>
       
       <div style="clear: both;"></div>
     </div>
@@ -146,6 +146,224 @@ $(function() {
       
         <span class="undefined">
           I send and accept JSON
+          <div class="definition developer">
+            <a href="../step_transformers.html#undefined_steps">
+              <div class="invalid">&nbsp;</div>
+            </a>
+          </div>
+        </span>
+      
+
+    
+  </div>
+
+  
+  
+
+
+
+  
+
+  
+  <div class="step even">
+    <span class="predicate">And </span>
+
+    
+
+      
+        <span class="undefined">
+          the time is 2015-05-04 22:00
+          <div class="definition developer">
+            <a href="../step_transformers.html#undefined_steps">
+              <div class="invalid">&nbsp;</div>
+            </a>
+          </div>
+        </span>
+      
+
+    
+  </div>
+
+  
+  
+
+
+
+  
+
+  
+  <div class="step odd">
+    <span class="predicate">And </span>
+
+    
+
+      
+        <span class="undefined">
+          the following drivers exist:
+          <div class="definition developer">
+            <a href="../step_transformers.html#undefined_steps">
+              <div class="invalid">&nbsp;</div>
+            </a>
+          </div>
+        </span>
+      
+
+    
+  </div>
+
+  <div class="multiline">
+  <table style="">
+
+    <thead>
+      <tr>
+        
+          <th class="odd">name</th>
+        
+          <th class="even">taxi_number</th>
+        
+          <th class="odd">latitude</th>
+        
+          <th class="even">longitude</th>
+        
+      </tr>
+    </thead>
+
+    
+      <tr class="odd">
+        
+          <td>Juan Perez</td>
+        
+          <td>5</td>
+        
+          <td>19.264997</td>
+        
+          <td>-103.7108419</td>
+        
+      </tr>
+    
+      <tr class="even">
+        
+          <td>John Doe</td>
+        
+          <td>22</td>
+        
+          <td>19.265189</td>
+        
+          <td>-103.713567</td>
+        
+      </tr>
+    
+      <tr class="odd">
+        
+          <td>Maria Guadalupe</td>
+        
+          <td>10</td>
+        
+          <td>19.269585</td>
+        
+          <td>-103.716614</td>
+        
+      </tr>
+    
+  </table>
+</div>
+
+  
+
+
+
+  
+
+  
+  <div class="step even">
+    <span class="predicate">And </span>
+
+    
+
+      
+        <span class="undefined">
+          a user with phone number &quot;+523121125642&quot; exists
+          <div class="definition developer">
+            <a href="../step_transformers.html#undefined_steps">
+              <div class="invalid">&nbsp;</div>
+            </a>
+          </div>
+        </span>
+      
+
+    
+  </div>
+
+  
+  
+
+
+
+  
+
+  
+  <div class="step odd">
+    <span class="predicate">And </span>
+
+    
+
+      
+        <span class="undefined">
+          his authentication token is &quot;foobar&quot;
+          <div class="definition developer">
+            <a href="../step_transformers.html#undefined_steps">
+              <div class="invalid">&nbsp;</div>
+            </a>
+          </div>
+        </span>
+      
+
+    
+  </div>
+
+  
+  
+
+
+
+  
+
+  
+  <div class="step even">
+    <span class="predicate">And </span>
+
+    
+
+      
+        <span class="undefined">
+          I have requested a driver from latitude &quot;19.264987&quot; and longitude &quot;-103.710863&quot;
+          <div class="definition developer">
+            <a href="../step_transformers.html#undefined_steps">
+              <div class="invalid">&nbsp;</div>
+            </a>
+          </div>
+        </span>
+      
+
+    
+  </div>
+
+  
+  
+
+
+
+  
+
+  
+  <div class="step odd">
+    <span class="predicate">Given </span>
+
+    
+
+      
+        <span class="undefined">
+          I set the request with the header &quot;X-AUTHENTICATION-TOKEN&quot; as &quot;foobar&quot;
           <div class="definition developer">
             <a href="../step_transformers.html#undefined_steps">
               <div class="invalid">&nbsp;</div>
@@ -182,7 +400,7 @@ $(function() {
     <div style="float: left;">
       <a class="toggle"> - </a>
       <span class="pre">Scenario:</span>
-      <span class="name">Successfully verifying the code</span>
+      <span class="name">Waiting a driver for respond to my request</span>
     </div>
     <a class="link" style="float:right; clear:right;" href="#scenario_0">link</a>
   </div>
@@ -193,14 +411,7 @@ $(function() {
 
   <div class="details">
     <div class="meta developer">
-      <div class="file">features/verification_codes.feature:10</div>
-      
-        <div style="clear:right;"></div>
-        <div class="tags">
-          
-            <a href="../tags/twilio-sms.html">@twilio-sms</a>
-          
-        </div>
+      <div class="file">features/request_driver_status.feature:19</div>
       
       <div style="clear: both;"></div>
     </div>
@@ -212,67 +423,13 @@ $(function() {
 
   
   <div class="step odd">
-    <span class="predicate">Given </span>
-
-    
-
-      
-        <span class="undefined">
-          a user with phone number &quot;+523121125642&quot; and verification code &quot;123456&quot; exist
-          <div class="definition developer">
-            <a href="../step_transformers.html#undefined_steps">
-              <div class="invalid">&nbsp;</div>
-            </a>
-          </div>
-        </span>
-      
-
-    
-  </div>
-
-  
-  
-
-
-
-  
-
-  
-  <div class="step even">
     <span class="predicate">And </span>
 
     
 
       
         <span class="undefined">
-          his authentication token is &quot;authentication_token_123&quot;
-          <div class="definition developer">
-            <a href="../step_transformers.html#undefined_steps">
-              <div class="invalid">&nbsp;</div>
-            </a>
-          </div>
-        </span>
-      
-
-    
-  </div>
-
-  
-  
-
-
-
-  
-
-  
-  <div class="step odd">
-    <span class="predicate">And </span>
-
-    
-
-      
-        <span class="undefined">
-          I send a POST request to &quot;/users/verification_codes/check&quot; with the following:
+          I send a GET request to &quot;/users/driver_requests/1&quot; with the following:
           <div class="definition developer">
             <a href="../step_transformers.html#undefined_steps">
               <div class="invalid">&nbsp;</div>
@@ -286,7 +443,7 @@ $(function() {
 
   
   <div class="text">
-  {<br/>&nbsp;&nbsp;&quot;verification_code&quot;&nbsp;:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;code&quot;&nbsp;:&nbsp;&quot;123456&quot;<br/>&nbsp;&nbsp;}<br/>}
+  
 </div>
 
 
@@ -343,7 +500,7 @@ $(function() {
 
   
   <div class="text">
-  {<br/>&nbsp;&nbsp;&quot;status&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&quot;ok&quot;,<br/>&nbsp;&nbsp;&quot;authentication_token&quot;&nbsp;:&nbsp;&quot;authentication_token_123&quot;<br/>}
+  {<br/>&nbsp;&nbsp;&quot;status&quot;&nbsp;&nbsp;:&nbsp;&quot;ok&quot;,<br/>&nbsp;&nbsp;&quot;driver_request&quot;&nbsp;:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;id&quot;&nbsp;:&nbsp;1,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;user_id&quot;&nbsp;:&nbsp;1,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;driver_id&quot;&nbsp;:&nbsp;null,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;status&quot;&nbsp;:&nbsp;&quot;pending&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;created_at&quot;&nbsp;:&nbsp;&quot;2015-05-04T22:00:00.000Z&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;expires_at&quot;&nbsp;:&nbsp;&quot;2015-05-04T22:03:00.000Z&quot;<br/>&nbsp;&nbsp;}<br/>}
 </div>
 
 
@@ -369,7 +526,7 @@ $(function() {
     <div style="float: left;">
       <a class="toggle"> - </a>
       <span class="pre">Scenario:</span>
-      <span class="name">Unsuccessfully verifying the code</span>
+      <span class="name">When a driver responds to the request</span>
     </div>
     <a class="link" style="float:right; clear:right;" href="#scenario_1">link</a>
   </div>
@@ -380,14 +537,7 @@ $(function() {
 
   <div class="details">
     <div class="meta developer">
-      <div class="file">features/verification_codes.feature:31</div>
-      
-        <div style="clear:right;"></div>
-        <div class="tags">
-          
-            <a href="../tags/twilio-sms.html">@twilio-sms</a>
-          
-        </div>
+      <div class="file">features/request_driver_status.feature:39</div>
       
       <div style="clear: both;"></div>
     </div>
@@ -405,7 +555,7 @@ $(function() {
 
       
         <span class="undefined">
-          a user with phone number &quot;+523121125642&quot; and verification code &quot;123456&quot; exist
+          a driver with taxi number &quot;5&quot; responds to my request with id &quot;1&quot;
           <div class="definition developer">
             <a href="../step_transformers.html#undefined_steps">
               <div class="invalid">&nbsp;</div>
@@ -432,7 +582,7 @@ $(function() {
 
       
         <span class="undefined">
-          I send a POST request to &quot;/users/verification_codes/check&quot; with the following:
+          I send a GET request to &quot;/users/driver_requests/1&quot; with the following:
           <div class="definition developer">
             <a href="../step_transformers.html#undefined_steps">
               <div class="invalid">&nbsp;</div>
@@ -446,167 +596,7 @@ $(function() {
 
   
   <div class="text">
-  {<br/>&nbsp;&nbsp;&quot;verification_code&quot;&nbsp;:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;code&quot;&nbsp;:&nbsp;&quot;not_the_code&quot;<br/>&nbsp;&nbsp;}<br/>}
-</div>
-
-
-
-
   
-
-  
-  <div class="step odd">
-    <span class="predicate">Then </span>
-
-    
-
-      
-        <span class="undefined">
-          the response status should be &quot;422&quot;
-          <div class="definition developer">
-            <a href="../step_transformers.html#undefined_steps">
-              <div class="invalid">&nbsp;</div>
-            </a>
-          </div>
-        </span>
-      
-
-    
-  </div>
-
-  
-  
-
-
-
-  
-
-  
-  <div class="step even">
-    <span class="predicate">And </span>
-
-    
-
-      
-        <span class="undefined">
-          the JSON response should be:
-          <div class="definition developer">
-            <a href="../step_transformers.html#undefined_steps">
-              <div class="invalid">&nbsp;</div>
-            </a>
-          </div>
-        </span>
-      
-
-    
-  </div>
-
-  
-  <div class="text">
-  {<br/>&nbsp;&nbsp;&quot;status&quot;&nbsp;:&nbsp;&quot;error&quot;,<br/>&nbsp;&nbsp;&quot;error&quot;&nbsp;&nbsp;:&nbsp;&quot;verification_code_not_exists&quot;<br/>}
-</div>
-
-
-
-
-
-      
-    </div>
-
-
-    
-
-  </div>
-  
-  <div class="attributes" style="display:none;">
-    <input type="hidden" name="collapsed" value="false">
-  </div>
-
-</div>
-<div class="scenario scenario_2">
-  <a name="scenario_2" />
-  <div class="title">
-    <div style="float: left;">
-      <a class="toggle"> - </a>
-      <span class="pre">Scenario:</span>
-      <span class="name">Trying to verify code twice</span>
-    </div>
-    <a class="link" style="float:right; clear:right;" href="#scenario_2">link</a>
-  </div>
-
-  
-
-  
-
-  <div class="details">
-    <div class="meta developer">
-      <div class="file">features/verification_codes.feature:51</div>
-      
-        <div style="clear:right;"></div>
-        <div class="tags">
-          
-            <a href="../tags/twilio-sms.html">@twilio-sms</a>
-          
-        </div>
-      
-      <div style="clear: both;"></div>
-    </div>
-
-    <div class="steps">
-      
-        
-  
-
-  
-  <div class="step odd">
-    <span class="predicate">Given </span>
-
-    
-
-      
-        <span class="undefined">
-          a user with phone number &quot;+523121125642&quot; and verification code &quot;123456&quot; exist
-          <div class="definition developer">
-            <a href="../step_transformers.html#undefined_steps">
-              <div class="invalid">&nbsp;</div>
-            </a>
-          </div>
-        </span>
-      
-
-    
-  </div>
-
-  
-  
-
-
-
-  
-
-  
-  <div class="step even">
-    <span class="predicate">And </span>
-
-    
-
-      
-        <span class="undefined">
-          I send a POST request to &quot;/users/verification_codes/check&quot; with the following:
-          <div class="definition developer">
-            <a href="../step_transformers.html#undefined_steps">
-              <div class="invalid">&nbsp;</div>
-            </a>
-          </div>
-        </span>
-      
-
-    
-  </div>
-
-  
-  <div class="text">
-  {<br/>&nbsp;&nbsp;&quot;verification_code&quot;&nbsp;:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;code&quot;&nbsp;:&nbsp;&quot;123456&quot;<br/>&nbsp;&nbsp;}<br/>}
 </div>
 
 
@@ -649,7 +639,7 @@ $(function() {
 
       
         <span class="undefined">
-          I send a POST request to &quot;/users/verification_codes/check&quot; with the following:
+          the JSON response should be:
           <div class="definition developer">
             <a href="../step_transformers.html#undefined_steps">
               <div class="invalid">&nbsp;</div>
@@ -663,7 +653,7 @@ $(function() {
 
   
   <div class="text">
-  {<br/>&nbsp;&nbsp;&quot;verification_code&quot;&nbsp;:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;code&quot;&nbsp;:&nbsp;&quot;123456&quot;<br/>&nbsp;&nbsp;}<br/>}
+  {<br/>&nbsp;&nbsp;&quot;status&quot;&nbsp;&nbsp;:&nbsp;&quot;ok&quot;,<br/>&nbsp;&nbsp;&quot;driver_request&quot;&nbsp;:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;id&quot;&nbsp;:&nbsp;1,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;user_id&quot;&nbsp;:&nbsp;1,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;driver_id&quot;&nbsp;:&nbsp;1,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;status&quot;&nbsp;:&nbsp;&quot;in_progress&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;created_at&quot;&nbsp;:&nbsp;&quot;2015-05-04T22:00:00.000Z&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;expires_at&quot;&nbsp;:&nbsp;&quot;2015-05-04T22:03:00.000Z&quot;<br/>&nbsp;&nbsp;}<br/>}
 </div>
 
 
@@ -679,7 +669,7 @@ $(function() {
 
       
         <span class="undefined">
-          the response status should be &quot;422&quot;
+          the status from the driver &quot;5&quot; should be &quot;busy&quot;
           <div class="definition developer">
             <a href="../step_transformers.html#undefined_steps">
               <div class="invalid">&nbsp;</div>
@@ -693,36 +683,6 @@ $(function() {
 
   
   
-
-
-
-  
-
-  
-  <div class="step even">
-    <span class="predicate">And </span>
-
-    
-
-      
-        <span class="undefined">
-          the JSON response should be:
-          <div class="definition developer">
-            <a href="../step_transformers.html#undefined_steps">
-              <div class="invalid">&nbsp;</div>
-            </a>
-          </div>
-        </span>
-      
-
-    
-  </div>
-
-  
-  <div class="text">
-  {<br/>&nbsp;&nbsp;&quot;status&quot;&nbsp;:&nbsp;&quot;error&quot;,<br/>&nbsp;&nbsp;&quot;error&quot;&nbsp;&nbsp;:&nbsp;&quot;verification_code_not_exists&quot;<br/>}
-</div>
-
 
 
 

@@ -472,7 +472,7 @@ $(function() {
     <div style="float: left;">
       <a class="toggle"> - </a>
       <span class="pre">Scenario:</span>
-      <span class="name">Search drivers succesfully with no drivers around</span>
+      <span class="name">When a driver gets busy</span>
     </div>
     <a class="link" style="float:right; clear:right;" href="#scenario_1">link</a>
   </div>
@@ -484,6 +484,240 @@ $(function() {
   <div class="details">
     <div class="meta developer">
       <div class="file">features/search_drivers.feature:62</div>
+      
+      <div style="clear: both;"></div>
+    </div>
+
+    <div class="steps">
+      
+        
+  
+
+  
+  <div class="step odd">
+    <span class="predicate">Given </span>
+
+    
+
+      
+        <span class="undefined">
+          a user with phone number &quot;+523121125642&quot; exists
+          <div class="definition developer">
+            <a href="../step_transformers.html#undefined_steps">
+              <div class="invalid">&nbsp;</div>
+            </a>
+          </div>
+        </span>
+      
+
+    
+  </div>
+
+  
+  
+
+
+
+  
+
+  
+  <div class="step even">
+    <span class="predicate">And </span>
+
+    
+
+      
+        <span class="undefined">
+          his authentication token is &quot;foobar&quot;
+          <div class="definition developer">
+            <a href="../step_transformers.html#undefined_steps">
+              <div class="invalid">&nbsp;</div>
+            </a>
+          </div>
+        </span>
+      
+
+    
+  </div>
+
+  
+  
+
+
+
+  
+
+  
+  <div class="step odd">
+    <span class="predicate">And </span>
+
+    
+
+      
+        <span class="undefined">
+          I set the request with the header &quot;X-AUTHENTICATION-TOKEN&quot; as &quot;foobar&quot;
+          <div class="definition developer">
+            <a href="../step_transformers.html#undefined_steps">
+              <div class="invalid">&nbsp;</div>
+            </a>
+          </div>
+        </span>
+      
+
+    
+  </div>
+
+  
+  
+
+
+
+  
+
+  
+  <div class="step even">
+    <span class="predicate">And </span>
+
+    
+
+      
+        <span class="undefined">
+          the taxi with number &quot;22&quot; gets busy
+          <div class="definition developer">
+            <a href="../step_transformers.html#undefined_steps">
+              <div class="invalid">&nbsp;</div>
+            </a>
+          </div>
+        </span>
+      
+
+    
+  </div>
+
+  
+  
+
+
+
+  
+
+  
+  <div class="step odd">
+    <span class="predicate">And </span>
+
+    
+
+      
+        <span class="undefined">
+          I send a GET request to &quot;/users/drivers&quot; with the following:
+          <div class="definition developer">
+            <a href="../step_transformers.html#undefined_steps">
+              <div class="invalid">&nbsp;</div>
+            </a>
+          </div>
+        </span>
+      
+
+    
+  </div>
+
+  
+  <div class="text">
+  {<br/>&nbsp;&nbsp;&quot;latitude&quot;&nbsp;:&nbsp;&quot;19.264987&quot;,<br/>&nbsp;&nbsp;&quot;longitude&quot;&nbsp;:&nbsp;&quot;-103.710863&quot;<br/>}
+</div>
+
+
+
+
+  
+
+  
+  <div class="step even">
+    <span class="predicate">Then </span>
+
+    
+
+      
+        <span class="undefined">
+          the response status should be &quot;200&quot;
+          <div class="definition developer">
+            <a href="../step_transformers.html#undefined_steps">
+              <div class="invalid">&nbsp;</div>
+            </a>
+          </div>
+        </span>
+      
+
+    
+  </div>
+
+  
+  
+
+
+
+  
+
+  
+  <div class="step odd">
+    <span class="predicate">And </span>
+
+    
+
+      
+        <span class="undefined">
+          the JSON response should be:
+          <div class="definition developer">
+            <a href="../step_transformers.html#undefined_steps">
+              <div class="invalid">&nbsp;</div>
+            </a>
+          </div>
+        </span>
+      
+
+    
+  </div>
+
+  
+  <div class="text">
+  {<br/>&nbsp;&nbsp;&quot;status&quot;&nbsp;&nbsp;:&nbsp;&quot;ok&quot;,<br/>&nbsp;&nbsp;&quot;drivers&quot;&nbsp;:&nbsp;[<br/>&nbsp;&nbsp;&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;id&quot;&nbsp;:&nbsp;1,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;&nbsp;:&nbsp;&quot;Juan&nbsp;Perez&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;taxi_number&quot;&nbsp;:&nbsp;5,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;location&quot;&nbsp;:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;latitude&quot;&nbsp;:&nbsp;19.264997,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;longitude&quot;&nbsp;:&nbsp;-103.7108419<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;},<br/>&nbsp;&nbsp;&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;id&quot;&nbsp;:&nbsp;3,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;&nbsp;:&nbsp;&quot;Maria&nbsp;Guadalupe&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;taxi_number&quot;&nbsp;:&nbsp;10,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;location&quot;&nbsp;:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;latitude&quot;&nbsp;:&nbsp;19.269585,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;longitude&quot;&nbsp;:&nbsp;-103.716614<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;]<br/>}
+</div>
+
+
+
+
+
+      
+    </div>
+
+
+    
+
+  </div>
+  
+  <div class="attributes" style="display:none;">
+    <input type="hidden" name="collapsed" value="false">
+  </div>
+
+</div>
+<div class="scenario scenario_2">
+  <a name="scenario_2" />
+  <div class="title">
+    <div style="float: left;">
+      <a class="toggle"> - </a>
+      <span class="pre">Scenario:</span>
+      <span class="name">Search drivers succesfully with no drivers around</span>
+    </div>
+    <a class="link" style="float:right; clear:right;" href="#scenario_2">link</a>
+  </div>
+
+  
+
+  
+
+  <div class="details">
+    <div class="meta developer">
+      <div class="file">features/search_drivers.feature:102</div>
       
       <div style="clear: both;"></div>
     </div>
@@ -673,15 +907,15 @@ $(function() {
   </div>
 
 </div>
-<div class="scenario scenario_2">
-  <a name="scenario_2" />
+<div class="scenario scenario_3">
+  <a name="scenario_3" />
   <div class="title">
     <div style="float: left;">
       <a class="toggle"> - </a>
       <span class="pre">Scenario:</span>
       <span class="name">Search drivers unsuccesfully</span>
     </div>
-    <a class="link" style="float:right; clear:right;" href="#scenario_2">link</a>
+    <a class="link" style="float:right; clear:right;" href="#scenario_3">link</a>
   </div>
 
   
@@ -690,7 +924,7 @@ $(function() {
 
   <div class="details">
     <div class="meta developer">
-      <div class="file">features/search_drivers.feature:82</div>
+      <div class="file">features/search_drivers.feature:122</div>
       
       <div style="clear: both;"></div>
     </div>
@@ -856,7 +1090,7 @@ $(function() {
 </div>
 
     <div id="footer">
-  Generated on Tue May  5 13:28:55 2015 by
+  Generated on Fri May 22 18:06:33 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.2.0).
 </div>
