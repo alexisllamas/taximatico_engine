@@ -19,3 +19,8 @@ end
 Given /^the time is (\d+)\-(\d+)\-(\d+) (\d+):(\d+)$/ do |year, month, day, hour, minute|
   Timecop.freeze DateTime.new(year.to_i, month.to_i, day.to_i, hour.to_i, minute.to_i)
 end
+
+Given /^the taxi with number "(.*?)" gets busy$/ do |taxi_number|
+  driver = Driver.get_driver_by_number(taxi_number)
+  driver.busy!
+end

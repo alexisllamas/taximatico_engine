@@ -22,6 +22,10 @@ class Driver < ActiveRecord::Base
     driver
   end
 
+  def self.get_driver_by_number(taxi_number)
+    where(taxi_number: taxi_number).first
+  end
+
   def update_location(latitude, longitude)
     Driver::Location.create_location(self, latitude, longitude)
     __elasticsearch__.update_document_attributes(as_indexed_json)
