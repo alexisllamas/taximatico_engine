@@ -7,6 +7,7 @@
 require 'cucumber/rails'
 require 'cucumber/api_steps'
 require 'rspec/rails'
+require 'rspec/expectations'
 
 require "codeclimate-test-reporter"
 CodeClimate::TestReporter.start
@@ -66,5 +67,7 @@ Around do |scenario, block|
 end
 
 RSpec.configure do |config|
-  config.expect_with(:rspec) { |c| c.syntax = :should }
+  config.expect_with :rspec do |c|
+    c.syntax = [ :should, :expect ]
+  end
 end

@@ -5,8 +5,8 @@ json.drivers do
     json.name        driver.name
     json.taxi_number driver.taxi_number
     json.location do
-      json.latitude    driver.latitude
-      json.longitude   driver.longitude
+      json.latitude    driver.location[:lat]
+      json.longitude   driver.location[:lon]
     end
   end
 end

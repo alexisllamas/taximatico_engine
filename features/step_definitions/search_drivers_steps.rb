@@ -1,7 +1,8 @@
 Given /^the following drivers exist:$/ do |table|
   Driver.__elasticsearch__.create_index! force: true
   table.rows.each do |row|
-    Driver.create_driver(*row)
+    driver = Driver.create_driver(row[0], row[1])
+    driver.update_location(row[2], row[3])
   end
   Driver.__elasticsearch__.refresh_index!
 end
