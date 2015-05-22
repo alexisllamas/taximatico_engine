@@ -59,6 +59,46 @@ Feature: Search drivers
     }
     """
 
+  Scenario: When a driver gets busy
+    Given a user with phone number "+523121125642" exists
+    And his authentication token is "foobar"
+    And I set the request with the header "X-AUTHENTICATION-TOKEN" as "foobar"
+    And the taxi with number "22" gets busy
+    And I send a GET request to "/users/drivers" with the following:
+    """
+    {
+      "latitude" : "19.264987",
+      "longitude" : "-103.710863"
+    }
+    """
+    Then the response status should be "200"
+    And the JSON response should be:
+    """
+    {
+      "status"  : "ok",
+      "drivers" : [
+        {
+          "id" : 1,
+          "name" : "Juan Perez",
+          "taxi_number" : 5,
+          "location" : {
+            "latitude" : 19.264997,
+            "longitude" : -103.7108419
+          }
+        },
+        {
+          "id" : 3,
+          "name" : "Maria Guadalupe",
+          "taxi_number" : 10,
+          "location" : {
+            "latitude" : 19.269585,
+            "longitude" : -103.716614
+          }
+        }
+      ]
+    }
+    """
+
   Scenario: Search drivers succesfully with no drivers around
     Given a user with phone number "+523121125642" exists
     And his authentication token is "foobar"

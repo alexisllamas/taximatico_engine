@@ -2,7 +2,8 @@ module Api
   module Users
     class DriversController < ::Api::Users::BaseController
       def index
-        @drivers = Geosearch.for(Driver, latitude, longitude, "1km")
+        results = Geosearch.for(Driver, latitude, longitude, "1km")
+        @drivers = results.free
       end
 
       private

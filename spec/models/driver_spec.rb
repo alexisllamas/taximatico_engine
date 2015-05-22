@@ -13,6 +13,31 @@ describe Driver do
     end
   end
 
+  describe ".get_driver_by_number" do
+    let(:driver) { Driver.create_driver("John Doe", 10) }
+
+    before { driver }
+
+    subject { Driver.get_driver_by_number(10) }
+
+    it "returns the driver with number 10" do
+      expect(subject).to eq driver
+    end
+  end
+
+  describe ".free" do
+    before do
+      3.times { Driver.create_driver(Faker::Name.name, rand(0..100)) }
+      Driver.first.busy!
+    end
+
+    subject { Driver.free }
+
+    it "returns all the free drivers" do
+      expect(subject.count).to eq 2
+    end
+  end
+
   describe "#update_location" do
     let(:driver) { Driver.create_driver(name, taxi_number) }
     let(:latitude) { 100.00 }
